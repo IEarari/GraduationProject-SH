@@ -8,47 +8,47 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 
-public class Home extends AppCompatActivity {
+public class HomeAr extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_home);
-        Button toAr = findViewById(R.id.toAr);
-        toAr.setOnClickListener(new View.OnClickListener() {
+        setContentView(R.layout.activity_home_ar);
+        Button toEng = findViewById(R.id.toEng);
+        toEng.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                startActivity(new Intent(Home.this, HomeAr.class));
-                Home.this.finish();
+                startActivity(new Intent(HomeAr.this, Home.class));
+                HomeAr.this.finish();
             }
         });
-        Button book_button = findViewById(R.id.book);
+        Button book_button = findViewById(R.id.book_ar);
         book_button.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                startActivity(new Intent(Home.this, Tour.class));
+                startActivity(new Intent(HomeAr.this, TourAR.class));
             }
         });
-        Button about_button = findViewById(R.id.about);
+        Button about_button = findViewById(R.id.about_ar);
         about_button.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                startActivity(new Intent(Home.this, About.class));
+                startActivity(new Intent(HomeAr.this, AboutAr.class));
             }
         });
-        Button gifts_button = findViewById(R.id.gifts);
+        Button gifts_button = findViewById(R.id.gifts_ar);
         gifts_button.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                startActivity(new Intent(Home.this, Gifts.class));
+                startActivity(new Intent(HomeAr.this, GiftsAr.class));
             }
         });
-        Button contact_button = findViewById(R.id.contact);
+        Button contact_button = findViewById(R.id.contact_ar);
         contact_button.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                startActivity(new Intent(Home.this, Contact.class));
+                startActivity(new Intent(HomeAr.this, ContactAr.class));
             }
         });
-        Button news_button = findViewById(R.id.news);
+        Button news_button = findViewById(R.id.news_ar);
         news_button.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
-                startActivity(new Intent(Home.this, NewsActivity.class));
+                startActivity(new Intent(HomeAr.this, NewsARActivity.class));
             }
         });
     }
@@ -56,13 +56,12 @@ public class Home extends AppCompatActivity {
     @Override
     public void onBackPressed() {
         new AlertDialog.Builder(this)
-                .setMessage("Are you sure you want to exit?")
-                .setNegativeButton("Stay", null)
-                .setPositiveButton("Exit", new DialogInterface.OnClickListener() {
+                .setMessage("هل انت متأكد من انك تريد الخروج ؟")
+                .setNegativeButton("البقاء", null)
+                .setPositiveButton("الخروج", new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface arg0, int arg1) {
-                        Home.super.onBackPressed();
+                        HomeAr.super.onBackPressed();
                     }
                 }).create().show();
     }
-
 }

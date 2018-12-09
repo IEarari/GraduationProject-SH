@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:orientation="vertical"
+    tools:context=".About">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="40dp"
+        android:layout_weight=".25"
+        android:scaleType="centerInside"
+        android:src="@drawable/sc_nay" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="25dp"
+        android:layout_weight="1">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="25dp"
+            android:fontFamily="@font/quicksand"
+            android:text="@string/about_us_ar"
+            android:textColor="#0097e6"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="7dp"
+        android:layout_weight=".2">
+
+        <Button
+
+            android:id="@+id/book_tour_as_ar"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp"
+            android:layout_weight="1"
+            android:background="@drawable/button_blue_grey"
+            android:fontFamily="@font/quicksand"
+            android:text="احجز \nزيارة !"
+            android:textColor="#f5f6fa"
+            android:textSize="14sp" />
+
+        <Button
+            android:id="@+id/Latest_news_as_ar"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="2dp"
+            android:layout_weight="1"
+            android:background="@drawable/button_blue_grey"
+            android:fontFamily="@font/quicksand"
+            android:text="اخر \nالاخبار"
+            android:textColor="#f5f6fa"
+            android:textSize="14sp" />
+
+        <Button
+            android:id="@+id/GShop_as_ar"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="2dp"
+            android:layout_weight="1"
+            android:background="@drawable/button_blue_grey"
+            android:fontFamily="@font/quicksand"
+            android:text="متجر \nالهدايا"
+            android:textColor="#f5f6fa"
+            android:textSize="14sp" />
+
+        <Button
+            android:id="@+id/Contact_US_as_ar"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="2dp"
+            android:layout_weight="1"
+            android:background="@drawable/button_blue_grey"
+            android:fontFamily="@font/quicksand"
+            android:text="تواصل \nمعنا"
+            android:textColor="#f5f6fa"
+            android:textSize="12sp" />
+    </LinearLayout>
+</LinearLayout>

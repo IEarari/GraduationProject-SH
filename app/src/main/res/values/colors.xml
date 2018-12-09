@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="colorPrimary">#595b66</color>
-    <color name="colorPrimaryDark">#e72f2f31</color>
+    <color name="colorPrimaryDark">#2f2f31</color>
     <color name="colorAccent">#FF4081</color>
     <color name="edit_booking">#1D4F9C</color>
     <color name="black">#000000</color>
     <color name="yellow">#F5CD30</color>
     <color name="custom_White">#f0f0f0</color>
     <color name="background_news">#f5f6fa</color>
+    <color name="g_c">#718093</color>
 </resources>

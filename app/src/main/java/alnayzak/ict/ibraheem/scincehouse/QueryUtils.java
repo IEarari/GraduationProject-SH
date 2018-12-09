@@ -1,10 +1,8 @@
 package alnayzak.ict.ibraheem.scincehouse;
 
 import android.util.Log;
-import android.widget.Toast;
 
 import org.json.JSONArray;
-import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.BufferedReader;
@@ -19,7 +17,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 import static alnayzak.ict.ibraheem.scincehouse.NewsActivity.LOG_TAG;
-import static android.widget.Toast.LENGTH_LONG;
 
 
 public class QueryUtils {
@@ -35,7 +32,7 @@ public class QueryUtils {
         String jsonResponse = null;
         try {
             jsonResponse = makeHttpRequest(url);
-            Log.e(LOG_TAG,jsonResponse);
+            Log.e(LOG_TAG, jsonResponse);
         } catch (IOException e) {
             Log.e(LOG_TAG, "Error closing input stream", e);
         }
@@ -49,32 +46,21 @@ public class QueryUtils {
         ArrayList<News> news = new ArrayList<>();
 
         try {
-            JSONObject response = new JSONObject(newsJSON).getJSONObject("items");
-            JSONArray newsArray;
-            try{
-            if (response.has("etag")) {
-                newsArray = response.getJSONArray("items");
-                String title = "", datePublished = "", url = "";
-                for (int i = 0; i < newsArray.length(); i++) {
-                    try {
-                        if (newsArray.getJSONObject(i).has("title"))
-                            title = newsArray.getJSONObject(i).getString("title");
-                        if (newsArray.getJSONObject(i).has("published"))
-                            datePublished = newsArray.getJSONObject(i).getString("published");
-                        if (newsArray.getJSONObject(i).has("url"))
-                            url = newsArray.getJSONObject(i).getString("url");
-                        news.add(new News(title, datePublished, url));
-                    } catch (Exception e) {
-                        Log.e(LOG_TAG, "Problem 1");
-                    }
+            JSONArray newsArray = new JSONObject(newsJSON).getJSONArray("items");
+            String title = "", datePublished = "", url = "";
+            for (int i = 0; i < newsArray.length(); i++) {
+                try {
+                    if (newsArray.getJSONObject(i).has("title"))
+                        title = newsArray.getJSONObject(i).getString("title");
+                    if (newsArray.getJSONObject(i).has("published"))
+                        datePublished = newsArray.getJSONObject(i).getString("published");
+                    if (newsArray.getJSONObject(i).has("url"))
+                        url = newsArray.getJSONObject(i).getString("url");
+                    news.add(new News(title, datePublished, url));
+                } catch (Exception e) {
+                    Log.e(LOG_TAG, "Problem 1");
                 }
             }
-            else {
-                    Log.e(LOG_TAG, "No results available");
-                }
-            } catch (Exception e) {
-            Log.e(LOG_TAG, "Problem 2");
-        }
         } catch (Exception e) {
             Log.e(LOG_TAG, "Problem !");
         }

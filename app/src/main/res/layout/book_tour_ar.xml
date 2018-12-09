@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center_vertical|center_horizontal"
+    android:background="#f5f6fa"
+    android:orientation="vertical"
+    tools:context=".Tour">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="60dp"
+                android:orientation="vertical"
+                android:paddingRight="20sp"
+                android:paddingBottom="5dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        style="@style/BookingTour"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:text="اسم المعلم : " />
+                </RelativeLayout>
+
+                <EditText
+                    android:id="@+id/Booking_Person_Name_ar"
+                    style="@style/BookingTour_ET"
+                    android:cursorVisible="false"
+                    android:inputType="text"
+                    android:selectAllOnFocus="false"
+                    android:textColorLink="@color/edit_booking" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingRight="20sp"
+                android:paddingBottom="5dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        style="@style/BookingTour"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:text="رقم هاتف المعلم : " />
+                </RelativeLayout>
+
+                <EditText
+                    android:id="@+id/Booking_Person_Number_ar"
+                    style="@style/BookingTour_ET"
+                    android:hint="05XXXXXXXX"
+                    android:inputType="phone"
+                    android:selectAllOnFocus="false"
+                    android:singleLine="true"
+                    android:textColorLink="@color/edit_booking" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingRight="20sp"
+                android:paddingBottom="5dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        style="@style/BookingTour"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:text="المدينة :" />
+                </RelativeLayout>
+
+                <EditText
+                    android:id="@+id/Booking_City_Name_ar"
+                    style="@style/BookingTour_ET"
+                    android:inputType="text"
+                    android:textColorLink="@color/edit_booking" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingRight="20sp"
+                android:paddingBottom="5dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        style="@style/BookingTour"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:text="اسم المدرسة : " />
+                </RelativeLayout>
+
+                <EditText
+                    android:id="@+id/Booking_ORG_Name_ar"
+                    style="@style/BookingTour_ET"
+                    android:textColorLink="@color/edit_booking" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingRight="20sp"
+                android:paddingBottom="10dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        style="@style/BookingTour"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:text="رقم هاتف المدرسة : "
+                        android:textStyle="bold" />
+                </RelativeLayout>
+
+                <EditText
+                    android:id="@+id/Booking_ORG_Number_ar"
+                    style="@style/BookingTour_ET"
+                    android:hint="0X-XXXXXXX"
+                    android:inputType="phone"
+                    android:textColorLink="@color/edit_booking" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingRight="20sp"
+                android:paddingBottom="10dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/Booking_Date_ar"
+                        style="@style/BookingTour_ET"
+                        android:layout_width="wrap_content"
+                        android:layout_toLeftOf="@id/tvDate"
+                        android:text="اضغط هنا لتحديد تاريخ الزيارة"
+                        android:textColor="#718093" />
+
+                    <TextView
+                        android:id="@+id/tvDate"
+                        style="@style/BookingTour"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:text="موعد الزيارة : " />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingRight="20sp"
+                android:paddingBottom="10dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <Button
+                        android:id="@+id/minusA_ar"
+                        android:layout_width="40sp"
+                        android:layout_height="40sp"
+                        android:layout_marginLeft="15sp"
+                        android:layout_toLeftOf="@id/adultsN_ar"
+                        android:background="@drawable/button_grey"
+                        android:fontFamily="@font/quicksand"
+                        android:text="-"
+                        android:textColor="#f5f6fa"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/adultsN_ar"
+                        style="@style/BookingTour"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="15sp"
+                        android:layout_toLeftOf="@id/plus_adults_ar"
+                        android:text="0" />
+
+                    <Button
+                        android:id="@+id/plus_adults_ar"
+                        android:layout_width="40sp"
+                        android:layout_height="40sp"
+                        android:layout_marginLeft="15sp"
+                        android:layout_toLeftOf="@id/TeactherTVString"
+                        android:background="@drawable/button_grey"
+                        android:fontFamily="@font/quicksand"
+                        android:text="+"
+                        android:textColor="#f5f6fa"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/TeactherTVString"
+                        style="@style/BookingTour"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:text="عدد المعلمين :     " />
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingRight="20sp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/Tollab_tv"
+                        style="@style/BookingTour"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:text="عدد الطلاب :      " />
+
+                    <Button
+                        android:id="@+id/minusK_ar"
+                        android:layout_width="40sp"
+                        android:layout_height="40sp"
+                        android:layout_marginLeft="15sp"
+                        android:layout_toLeftOf="@id/kidsN_ar"
+                        android:background="@drawable/button_grey"
+                        android:fontFamily="@font/quicksand"
+                        android:text="-"
+                        android:textColor="#f5f6fa"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/kidsN_ar"
+                        style="@style/BookingTour"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="15sp"
+                        android:layout_toLeftOf="@id/plusK_ar"
+                        android:text="0" />
+
+                    <Button
+                        android:id="@+id/plusK_ar"
+                        android:layout_width="40sp"
+                        android:layout_height="40sp"
+                        android:layout_marginLeft="15sp"
+                        android:layout_toLeftOf="@id/Tollab_tv"
+                        android:background="@drawable/button_grey"
+                        android:fontFamily="@font/quicksand"
+                        android:text="+"
+                        android:textColor="#f5f6fa"
+                        android:textSize="20sp" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_alignParentRight="true"
+                    android:id="@+id/costs_ar"
+                    style="@style/BookingTour"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="25dp"
+                    android:text="ثمن حجز الزيارة : 0 ش.ج" />
+            </RelativeLayout>
+
+            <Button
+                android:id="@+id/Booking_Tour_Submit_ar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="50dp"
+                android:background="@drawable/button_grey"
+                android:fontFamily="@font/quicksand"
+                android:paddingHorizontal="20sp"
+                android:text="احجز !"
+                android:textColor="#f5f6fa"
+                android:textSize="20sp" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
+

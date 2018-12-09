@@ -12,15 +12,15 @@ import android.widget.Toast;
 
 import static android.widget.Toast.LENGTH_LONG;
 
-public class Contact extends AppCompatActivity {
+public class ContactAr extends AppCompatActivity {
 
     boolean network = false;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.contact_us);
-        Button send = findViewById(R.id.contacting_button_send);
+        setContentView(R.layout.contact_us_ar);
+        Button send = findViewById(R.id.contacting_button_send_ar);
         isNetworkAvailable();
         send.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
@@ -29,13 +29,13 @@ public class Contact extends AppCompatActivity {
                 new Thread(new Runnable() {
                     public void run() {
                         boolean isNull = false;
-                        EditText Name_field = findViewById(R.id.contacting_field_name);
+                        EditText Name_field = findViewById(R.id.contacting_field_name_ar);
                         String Name = Name_field.getText().toString();
-                        EditText Subject_field = findViewById(R.id.contacting_field_subject);
+                        EditText Subject_field = findViewById(R.id.contacting_field_subject_ar);
                         String Subject = Subject_field.getText().toString();
-                        EditText Message_field = findViewById(R.id.contacting_field_message);
+                        EditText Message_field = findViewById(R.id.contacting_field_message_ar);
                         String Message = Message_field.getText().toString();
-                        EditText Phone_Number_Field = findViewById(R.id.contacting_field_phone_number);
+                        EditText Phone_Number_Field = findViewById(R.id.contacting_field_phone_number_ar);
                         String Phone_Number = Phone_Number_Field.getText().toString();
                         CharSequence text;
                         int duration = Toast.LENGTH_SHORT;
@@ -95,21 +95,21 @@ public class Contact extends AppCompatActivity {
         String text = "";
         boolean isNull = false;
         if (!network) {
-            text = "Please Check Your Internet Connection";
+            text = "تحقق من اتصالك بالانترنت !";
         } else if (Name.matches("")) {
-            text = "Please Insert Your Name";
+            text = "يبدو انك نسيت ادخال اسمك";
             isNull = true;
         } else if (Phone_Number.matches("")) {
-            text = "Please Insert Your Number";
+            text = "يبدو انك نسيت ادخال رقم هاتفك";
             isNull = true;
         } else if (Subject.matches("")) {
-            text = "Please Insert The Subject";
+            text = "يبدو انك نسيت ادخال الموضوع";
             isNull = true;
         } else if (Message.matches("")) {
-            text = "Please Insert Your Message";
+            text = "لاتنسى كتابة الرسالة";
             isNull = true;
         } else if (isNull == false && network == true) {
-            text = "Start Sending";
+            text = "يرسل ...";
         }
         int duration = Toast.LENGTH_SHORT;
         Toast toast = Toast.makeText(context, text, duration);

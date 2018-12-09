@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="80dp"
+    android:paddingStart="@dimen/item_padding"
+    android:paddingLeft="@dimen/item_padding"
+    android:paddingRight="@dimen/item_padding"
+    android:paddingEnd="@dimen/item_padding"
+    android:background="@color/background_news">
+    <TextView
+        android:layout_marginTop="10dp"
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Palestine Main Articles"
+        android:maxLines="2"
+        android:textSize="18sp"
+        android:textColor="#0097e6"
+        android:layout_gravity="end"
+        android:fontFamily="@font/quicksand"/>
+    <LinearLayout
+        android:layout_weight="1"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:gravity="bottom">
+
+    <TextView
+        android:fontFamily="@font/quicksand"
+        android:id="@+id/data"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="May.7.2002"
+        android:textColor="#0097e6"
+        android:textSize="16sp" />
+        </LinearLayout>
+</LinearLayout>

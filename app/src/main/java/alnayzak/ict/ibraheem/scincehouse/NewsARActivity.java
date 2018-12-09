@@ -2,31 +2,27 @@ package alnayzak.ict.ibraheem.scincehouse;
 
 import android.app.LoaderManager;
 import android.content.Context;
-import android.content.Intent;
 import android.content.Loader;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
-import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
-import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class NewsActivity extends AppCompatActivity implements LoaderManager.LoaderCallbacks<List<News>> {
+public class NewsARActivity extends AppCompatActivity implements LoaderManager.LoaderCallbacks<List<News>> {
 
-    public static final String LOG_TAG = NewsActivity.class.getName();
+    public static final String LOG_TAG = NewsARActivity.class.getName();
 
-    private static final String News_LINK_URL = "https://www.googleapis.com/blogger/v2/blogs/5107761521546972141/posts?key=AIzaSyC0IgnWMYvDbwTRF91IDXGDgQKDTIZcjTk";
+    private static final String News_LINK_URL = "https://www.googleapis.com/blogger/v2/blogs/3223410225734405339/posts?key=AIzaSyC0IgnWMYvDbwTRF91IDXGDgQKDTIZcjTk";
 
     private static final int Loading_NEWS_ID = 1;
 
-    private NewsAdapter mAdapter;
+    private NewsARAdapter mAdapter;
 
     private TextView mEmptyStateTextView;
 
@@ -41,7 +37,7 @@ public class NewsActivity extends AppCompatActivity implements LoaderManager.Loa
         mEmptyStateTextView = findViewById(R.id.empty_view);
         newsListView.setEmptyView(mEmptyStateTextView);
 
-        mAdapter = new NewsAdapter(NewsActivity.this, new ArrayList<News>());
+        mAdapter = new NewsARAdapter(NewsARActivity.this, new ArrayList<News>());
 
         newsListView.setAdapter(mAdapter);
         ConnectivityManager cm = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
@@ -53,7 +49,7 @@ public class NewsActivity extends AppCompatActivity implements LoaderManager.Loa
         } else {
             View loadingIndicator = findViewById(R.id.loading_indicator);
             loadingIndicator.setVisibility(View.GONE);
-            mEmptyStateTextView.setText(getString(R.string.no_internet_connection));
+            mEmptyStateTextView.setText("تحقق من اتصالك بالانترنت");
         }
     }
 

@@ -18,11 +18,19 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".HomeAr" android:screenOrientation="portrait"></activity>
         <activity android:name=".Tour" android:screenOrientation="portrait"></activity>
+        <activity android:name=".TourAR" android:screenOrientation="portrait"></activity>
         <activity android:name=".About" android:screenOrientation="portrait"></activity>
+        <activity android:name=".AboutAr" android:screenOrientation="portrait"></activity>
         <activity android:name=".Gifts" android:screenOrientation="portrait"></activity>
+        <activity android:name=".GiftsAr" android:screenOrientation="portrait"></activity>
         <activity android:name=".Contact" android:screenOrientation="portrait"></activity>
+        <activity android:name=".ContactAr" android:screenOrientation="portrait"></activity>
         <activity android:name=".NewsActivity" android:screenOrientation="portrait"></activity>
+        <activity android:name=".NewsARActivity" android:screenOrientation="portrait"></activity>
+        <activity android:name=".GiftDetailsActivity" android:screenOrientation="portrait"></activity>
+        <activity android:name=".GiftDetailsARActivity" android:screenOrientation="portrait"></activity>
     </application>
 
 </manifest>

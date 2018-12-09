@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Home"
+    tools:context=".HomeAr"
     tools:layout_editor_absoluteY="25dp">
     <!--616163 , 595b66 ,android:background="#616163" -->
     <RelativeLayout
@@ -29,17 +29,16 @@
                 android:layout_height="wrap_content">
 
                 <Button
-                    android:id="@+id/toAr"
-                    android:text="عربي"
-                    android:layout_marginRight="10dp"
-                    android:layout_alignParentRight="true"
+                    android:id="@+id/toEng"
+                    android:text="Engُ"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginLeft="10dp"
                     android:fontFamily="@font/quicksand"
                     android:layout_width="60dp"
                     android:layout_height="60dp"
                     android:layout_marginTop="10sp"
                     android:scaleType="centerInside"
                     android:textColor="#f5f6fa"
-
                     android:background="@drawable/lang_button" />
             </RelativeLayout>
 
@@ -53,7 +52,7 @@
                     android:layout_height="200dp"
                     android:layout_alignParentTop="true"
                     android:layout_centerHorizontal="true"
-                    android:layout_marginTop="20sp"
+                    android:layout_marginTop="30sp"
                     android:layout_marginBottom="50dp"
                     android:scaleType="centerInside"
                     android:src="@drawable/sc_home" />
@@ -80,20 +79,17 @@
                             android:layout_height="wrap_content"
                             android:layout_marginRight="12.5sp"
                             android:orientation="vertical">
-
                             <Button
-                                android:id="@+id/book"
+                                android:id="@+id/news_ar"
                                 style="@style/MainActivityButtons"
                                 android:layout_marginTop="0dp"
-                                android:background="@drawable/button_white"
-                                android:text="@string/booktourbutton"
-                                android:textColor="#0097e6" />
+                                android:text="اخر الاخبار" />
+
 
                             <Button
-                                android:id="@+id/gifts"
+                                android:id="@+id/about_ar"
                                 style="@style/MainActivityButtons"
-                                android:text="@string/giftshopbutton" />
-
+                                android:text="من نحن" />
 
                         </LinearLayout>
 
@@ -104,15 +100,17 @@
                             android:orientation="vertical">
 
                             <Button
-                                android:id="@+id/news"
+                                android:id="@+id/book_ar"
                                 style="@style/MainActivityButtons"
                                 android:layout_marginTop="0dp"
-                                android:text="@string/latestnews" />
+                                android:background="@drawable/button_white"
+                                android:text="احجز زيارة"
+                                android:textColor="#0097e6" />
 
                             <Button
-                                android:id="@+id/about"
+                                android:id="@+id/gifts_ar"
                                 style="@style/MainActivityButtons"
-                                android:text="@string/aboutus" />
+                                android:text="متجر الهدايا" />
 
                         </LinearLayout>
                     </LinearLayout>
@@ -122,10 +120,10 @@
                         android:layout_height="wrap_content">
 
                         <Button
-                            android:id="@+id/contact"
+                            android:id="@+id/contact_ar"
                             style="@style/MainActivityButtons"
                             android:layout_centerHorizontal="true"
-                            android:text="@string/contactus" />
+                            android:text="تواصل معنا" />
                     </RelativeLayout>
                 </LinearLayout>
             </RelativeLayout>

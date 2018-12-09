@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/background_news"
-    tools:context=".Contact">
+    tools:context=".ContactAr">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -20,21 +20,24 @@
         android:layout_marginBottom="25dp"
         android:layout_marginTop="50dp"
         android:orientation="vertical"
-        android:paddingLeft="20sp"
+        android:paddingRight="20sp"
         tools:layout_editor_absoluteX="16sp"
         tools:layout_editor_absoluteY="200sp">
-
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/quicksand"
-            android:text="Your Name :"
+            android:text="الاسم : "
+            android:layout_alignParentRight="true"
             android:textColor="@color/g_c"
             android:textSize="18sp"
             android:textStyle="bold" />
-
+        </RelativeLayout>
         <EditText
-            android:id="@+id/contacting_field_name"
+            android:id="@+id/contacting_field_name_ar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10sp"
@@ -49,21 +52,25 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="25dp"
             android:orientation="vertical"
-            android:paddingLeft="20sp"
+            android:paddingRight="20sp"
             tools:layout_editor_absoluteX="16sp"
             tools:layout_editor_absoluteY="200sp">
-
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/quicksand"
-                android:text="Your Phone number :"
+                android:layout_alignParentRight="true"
+                android:text="رقم الهاتف : "
                 android:textColor="@color/g_c"
                 android:textSize="18sp"
                 android:textStyle="bold" />
+            </RelativeLayout>
 
             <EditText
-                android:id="@+id/contacting_field_phone_number"
+                android:id="@+id/contacting_field_phone_number_ar"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10sp"
@@ -79,21 +86,24 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="25dp"
             android:orientation="vertical"
-            android:paddingLeft="20sp"
+            android:paddingRight="20sp"
             tools:layout_editor_absoluteX="16sp"
             tools:layout_editor_absoluteY="200sp">
-
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/quicksand"
-                android:text="Subject :"
+                android:text="الموضوع : "
+                android:layout_alignParentRight="true"
                 android:textColor="@color/g_c"
                 android:textSize="18sp"
                 android:textStyle="bold" />
-
+            </RelativeLayout>
             <EditText
-                android:id="@+id/contacting_field_subject"
+                android:id="@+id/contacting_field_subject_ar"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10sp"
@@ -109,21 +119,24 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="1dp"
             android:orientation="vertical"
-            android:paddingLeft="20sp"
+            android:paddingRight="20sp"
             tools:layout_editor_absoluteX="16sp"
             tools:layout_editor_absoluteY="200sp">
-
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/quicksand"
-                android:text="Message :"
+                android:text="الرسالة : "
+                android:layout_alignParentRight="true"
                 android:textColor="@color/g_c"
                 android:textSize="18sp"
                 android:textStyle="bold" />
-
+            </RelativeLayout>
             <EditText
-                android:id="@+id/contacting_field_message"
+                android:id="@+id/contacting_field_message_ar"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10sp"
@@ -143,13 +156,13 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
     <Button
-        android:id="@+id/contacting_button_send"
+        android:id="@+id/contacting_button_send_ar"
         android:layout_width="100dp"
         android:layout_height="60dp"
         android:layout_gravity="center_horizontal"
         android:background="@drawable/button_grey"
         android:fontFamily="@font/quicksand"
-        android:text="Send"
+        android:text="ارسل"
         android:textColor="@color/background_news"
         android:textSize="16sp" />
     </LinearLayout>

@@ -1,15 +1,13 @@
 <resources>
-    <string name="no_internet_connection">No Connection</string>
     <string name="no_news">No News To View</string>
     <string name="app_name">Science House</string>
-    <string name="about_us">The Science and Technology House is a dynamic body that follows the developments and advancements in the scientific, engineering, and technology aspects of our everyday lives. These phenomena are presented to the house’s visitors (children and adults) in an interactive manner that guarantees the visitors’ engagement in the process of knowledge acquisition, and guarantees the visitors’ entertainment with science and technology.
-
-The science house is considered an extracurricular educational institution that assists educators in channeling true knowledge to children in practical and exiting manner. It is also a place to have fun and spend vacation days as it contains various sections that are of interest to all ages and educational levels.
-
-The Science House is named after Sa’adeh family because this prestigious family from Birzeit has donated its old house for 15 years to be renovated and used by Al Nayzak Organization.
-The Science House aims at receiving 15 thousand students annually. Currently, the House is a destination for schools where specialized scientific trips are organized to enjoy hours of science and fun in a distinctive manner. The Science House experience is not only limited to specialized scientific visits, but can also re-introduces daily activities and special occasions. \n\n</string>
     <string name="hopper_desc">Hoppers is a fun thinking game that teaches logic, problem solving and evaluation of consequences. A set of frogs on a pond, jumping until only one is left standing. </string>
-    <string name="hopper_main">"• Skills: Logic - Problem Solving –Planning- sequential thinking   • Age: 5 and Up    • Game type: Cooperative   • Players: 1 Player or more    • Levels: 40</string>
+    <string name="hopper_main">
+        • Skills: Logic - Problem Solving –Planning- sequential thinking
+        • Age: 5 and Up
+        • Game type: Cooperative
+        • Players: 1 Player or more
+        • Levels: 40</string>
     <string name="enis">Einstein’s riddle is one of the complex riddles developed by the physicist Albert Einstein and relies on the basis of logical and critical thinking. The game requires a huge amount of concentration, and logical organization and sequencing towards the solution. The game addresses skills of team work and team dynamics. We ask ourselves, is team work always the best method towards achieving solutions? What are the characteristics of good team?</string>
     <string name="smm">• Skills: Memory, analysis and finding connections   • Age group: 8 years and above  • Type: competitive     • Number of players: 2 to 4 players     • Levels: none</string>
     <string name="tqd">With 4 pieces of cardboard the player is challenged to build meaningful shapes by putting them together, not covering any in order to build a shape from the ones in the shape’s list.</string>
@@ -20,6 +18,14 @@ The Science House aims at receiving 15 thousand students annually. Currently, th
 Each player has to think, s/he can use the solution code on the back of the card, they can also check the “knot” to know what to do in each status.</string>
     <string name="badirm">• Skills: problem solving, analysis, thinking outside the box     • Age group: 12 and above   • Type of game: cooperative     • Number of players: one    • Number of levels: 14</string>
     <string name="rhd">Imagine you have gone to visit a friend or a relative, you parked your car in the building parking, and when it was time to leave, you find that your car was stuck after the neighbors have come home. They left their car keys for you to get your car out. Try to get out of the parking lot using the rules of the game.</string>
-    <string name="rhm">• Skills: problem solving, setting goals, planning, analytical and logical thinking  • Age group: 8 and above    • Type: cooperative     • Number of players: one or two     • Number of levels: 40 levels in each phase</string>
+    <string name="rhm">• Skills: problem solving, setting goals, planning, analytical and logical thinking  \• Age group: 8 and above    • Type: cooperative     • Number of players: one or two     • Number of levels: 40 levels in each phase</string>
     <string name="smd">Through finding the relation between the card through pictures or texts, the player develops the memory and analyzes the network in addition to knowing the scientists and their most important achievement in an amusing way.</string>
+    <string name="no_internet_connection">Please Check Your Internet Connection</string>
+    <string name="about_us">"The Science and Technology House is a dynamic body that follows the developments and advancements in the scientific, engineering, and technology aspects of our everyday lives. These phenomena are presented to the house’s visitors (children and adults) in an interactive manner that guarantees the visitors’ engagement in the process of knowledge acquisition, and guarantees the visitors’ entertainment with science and technology. The science house is considered an extracurricular educational institution that assists educators in channeling true knowledge to children in practical and exiting manner. It is also a place to have fun and spend vacation days as it contains various sections that are of interest to all ages and educational levels. The Science House is named after Sa’adeh family because this prestigious family from Birzeit has donated its old house for 15 years to be renovated and used by Al Nayzak Organization. The Science House aims at receiving 15 thousand students annually. Currently, the House is a destination for schools where specialized scientific trips are organized to enjoy hours of science and fun in a distinctive manner. The Science House experience is not only limited to specialized scientific visits, but can also re-introduces daily activities and special occasions.   "\n\n</string>
+    <string name="about_us_ar">بيت العلوم والتكنولوجيا هو مكان حيوي يتبع التطورات في الجوانب العلمية والهندسية والتكنولوجية في حياتنا اليومية. وتُعرض هذه الظواهر على زوار المنزل (الأطفال والبالغين) بطريقة تفاعلية تكفل مشاركة الزوار في عملية اكتساب المعرفة ، وتضمن ترفيه الزوار بالعلوم والتكنولوجيا. يعتبر بيت العلوم مؤسسة تعليمية خارج المنهج الدراسي تساعد المعلمين في توجيه المعرفة الحقيقية للأطفال بطريقة عملية.وهو أيضًا مكان لقضاء وقت ممتع وقضاء أيام عطل حيث أنه يحتوي على أقسام مختلفة تهم جميع الأعمار والمستويات التعليمية. تم تسمية بيت العلوم على اسم عائلة سعاده لأن هذه العائلة المرموقة من بيرزيت قد تبرعت بمنزلها القديم لمدة 15 عامًا ليتم تجديده واستخدامه من قبل منظمة النيزك. يهدف بيت العلوم إلى استقبال 15 ألف طالب سنويًا. حاليا ، يعتبر بيت العلوم وجهة للمدارس حيث يتم تنظيم رحلات علمية متخصصة للتمتع بساعات من العلوم والمرح بطريقة مميزة. لا تقتصر تجربة بيت العلوم على الزيارات العلمية المتخصصة فحسب ، بل يمكنها أيضًا إعادة تقديم الأنشطة اليومية والمناسبات الخاصة. \n\n</string>
+    <string name="booktourbutton">Book A Tour</string>
+    <string name="giftshopbutton">Gift Shop</string>
+    <string name="latestnews">Latest News</string>
+    <string name="aboutus">About Us</string>
+    <string name="contactus">Contact Us</string>
 </resources>
