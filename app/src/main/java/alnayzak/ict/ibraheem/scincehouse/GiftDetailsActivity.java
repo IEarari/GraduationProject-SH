@@ -34,8 +34,8 @@ public class GiftDetailsActivity extends AppCompatActivity {
             mToolbar.setTitle(mBundle.getString("Title"));
             mFlower.setImageResource(mBundle.getInt("Image"));
             mDescription.setText(mBundle.getString("Description"));
-            mSkills.setVisibility(View.GONE);
-            mST.setVisibility(View.GONE);
+            mSkills.setVisibility(View.INVISIBLE);
+            mST.setVisibility(View.INVISIBLE);
         }
     }
 }

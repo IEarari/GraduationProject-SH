@@ -21,7 +21,7 @@ public class AboutAr extends AppCompatActivity {
         Button gifts_button_as = findViewById(R.id.GShop_as_ar);
         gifts_button_as.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                startActivity(new Intent(AboutAr.this,Gifts.class));
+                startActivity(new Intent(AboutAr.this,GiftsAr.class));
             }
         });
         Button contact_button_as = findViewById(R.id.Contact_US_as_ar);

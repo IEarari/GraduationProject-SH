@@ -22,7 +22,7 @@ public class GiftDetailsARActivity extends AppCompatActivity {
         mFlower = findViewById(R.id.ivImage_ar);
         mDescription = findViewById(R.id.tvDescription_ar);
         mSkills = findViewById(R.id.tvSkills_ar);
-        mST = findViewById(R.id.STitle);
+        mST = findViewById(R.id.STitle_ar);
         Bundle mBundle = getIntent().getExtras();
         if (mBundle != null && mBundle.getString("Skills") != null) {
             mToolbar.setTitle(mBundle.getString("Title"));
@@ -34,8 +34,8 @@ public class GiftDetailsARActivity extends AppCompatActivity {
             mToolbar.setTitle(mBundle.getString("Title"));
             mFlower.setImageResource(mBundle.getInt("Image"));
             mDescription.setText(mBundle.getString("Description"));
-            mSkills.setVisibility(View.GONE);
-            mST.setVisibility(View.GONE);
+            mSkills.setVisibility(View.INVISIBLE);
+            mST.setVisibility(View.INVISIBLE);
         }
     }
 }
