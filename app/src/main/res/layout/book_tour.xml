@@ -189,7 +189,7 @@
             android:layout_height="wrap_content">
             <Button
                 android:id="@+id/minusKten"
-                android:layout_width="80sp"
+                android:layout_width="70sp"
                 android:layout_height="40sp"
                 android:layout_marginLeft="15sp"
                 android:background="@drawable/button_grey"
@@ -228,7 +228,7 @@
             android:textSize="20sp" />
             <Button
                 android:id="@+id/plusKten"
-                android:layout_width="80sp"
+                android:layout_width="70sp"
                 android:layout_height="40sp"
                 android:layout_marginLeft="15sp"
                 android:background="@drawable/button_grey"

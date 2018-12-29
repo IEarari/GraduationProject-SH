@@ -30,7 +30,7 @@
 
                 <Button
                     android:id="@+id/toEng"
-                    android:text="Engُ"
+                    android:text="Eng"
                     android:layout_alignParentLeft="true"
                     android:layout_marginLeft="10dp"
                     android:fontFamily="@font/quicksand"
