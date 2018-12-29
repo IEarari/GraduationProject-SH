@@ -114,7 +114,7 @@ public class TourAR extends AppCompatActivity {
                 }
             }
         });
-        minusK.setOnClickListener(new View.OnClickListener() {
+        minusKten.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 if (kids - 10 >= 1) {
                     kids = kids - 10;
