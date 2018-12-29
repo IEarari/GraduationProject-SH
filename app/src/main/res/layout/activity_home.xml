@@ -30,17 +30,16 @@
 
                 <Button
                     android:id="@+id/toAr"
-                    android:text="عربي"
-                    android:layout_marginRight="10dp"
-                    android:layout_alignParentRight="true"
-                    android:fontFamily="@font/quicksand"
                     android:layout_width="60dp"
                     android:layout_height="60dp"
+                    android:layout_alignParentRight="true"
                     android:layout_marginTop="10sp"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/lang_button"
+                    android:fontFamily="@font/quicksand"
                     android:scaleType="centerInside"
-                    android:textColor="#f5f6fa"
-
-                    android:background="@drawable/lang_button" />
+                    android:text="عربي"
+                    android:textColor="#f5f6fa" />
             </RelativeLayout>
 
             <RelativeLayout
@@ -53,10 +52,10 @@
                     android:layout_height="200dp"
                     android:layout_alignParentTop="true"
                     android:layout_centerHorizontal="true"
-                    android:layout_marginTop="20sp"
                     android:layout_marginBottom="50dp"
                     android:scaleType="centerInside"
                     android:src="@drawable/sc_home" />
+
             </RelativeLayout>
 
             <RelativeLayout
@@ -128,6 +127,11 @@
                             android:text="@string/contactus" />
                     </RelativeLayout>
                 </LinearLayout>
+                <ImageView
+                    android:layout_width="150dp"
+                    android:layout_height="90dp"
+                    android:src="@drawable/nay"
+                    android:layout_alignParentBottom="true"/>
             </RelativeLayout>
         </LinearLayout>
     </RelativeLayout>

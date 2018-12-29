@@ -22,8 +22,8 @@ import java.net.URL;
 import java.util.Calendar;
 
 public class Tour extends AppCompatActivity {
-    int adults = 0;
-    int kids = 0;
+    int adults = 1;
+    int kids = 1;
     boolean network = false;
     private static final String TAG = "Tour";
     private TextView mDisplayDate;
@@ -66,7 +66,9 @@ public class Tour extends AppCompatActivity {
         Button plusA = findViewById(R.id.plusadults);
         Button minusA = findViewById(R.id.minusA);
         Button plusK = findViewById(R.id.plusK);
+        Button pluskten = findViewById(R.id.plusKten);
         Button minusK = findViewById(R.id.minusK);
+        Button minusKten = findViewById(R.id.minusKten);
         plusA.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 if (adults < 5) {
@@ -79,7 +81,7 @@ public class Tour extends AppCompatActivity {
         });
         minusA.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                if (adults > 0) {
+                if (adults > 1) {
                     adults = adults - 1;
                     displayA(adults);
                 }
@@ -93,13 +95,39 @@ public class Tour extends AppCompatActivity {
                 } else {
                     Toast.makeText(getApplicationContext(), "Sorry But We Could Not Receive More Than 50 Students", Toast.LENGTH_LONG).show();
                 }
+
+            }
+        });
+        pluskten.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                if (kids + 10 <= 50) {
+                    kids = kids + 10;
+                    displayK(kids);
+                } else {
+                    Toast.makeText(getApplicationContext(), "Sorry But We Could Not Receive More Than 50 Students", Toast.LENGTH_LONG).show();
+                }
+
             }
         });
         minusK.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                if (kids > 0) {
+                if (kids > 1) {
                     kids = kids - 1;
                     displayK(kids);
+                }
+                else{
+                    Toast.makeText(getApplicationContext(),"Students Number cant be Negative or zero",Toast.LENGTH_LONG).show();
+                }
+            }
+        });
+        minusKten.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                if (kids-10 >= 1) {
+                    kids = kids - 10;
+                    displayK(kids);
+                }
+                else{
+                    Toast.makeText(getApplicationContext(),"Students Number cant be Negative or zero",Toast.LENGTH_LONG).show();
                 }
             }
         });

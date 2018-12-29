@@ -19,8 +19,8 @@ import android.widget.Toast;
 import java.util.Calendar;
 
 public class TourAR extends AppCompatActivity {
-    int adults = 0;
-    int kids = 0;
+    int adults = 1;
+    int kids = 1;
     boolean network = false;
     private static final String TAG = "TourAR";
     private TextView mDisplayDate;
@@ -63,7 +63,9 @@ public class TourAR extends AppCompatActivity {
         Button plusA = findViewById(R.id.plus_adults_ar);
         Button minusA = findViewById(R.id.minusA_ar);
         Button plusK = findViewById(R.id.plusK_ar);
+        Button plusKten = findViewById(R.id.plusKten_ar);
         Button minusK = findViewById(R.id.minusK_ar);
+        Button minusKten = findViewById(R.id.minusKten_ar);
         plusA.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 if (adults < 5) {
@@ -92,11 +94,33 @@ public class TourAR extends AppCompatActivity {
                 }
             }
         });
+        plusKten.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                if (kids + 10 <= 50) {
+                    kids = kids + 10;
+                    displayK(kids);
+                } else {
+                    Toast.makeText(getApplicationContext(), "نعتذر في بيت العلوم استقبال ما يزيد عن 50 طالب !", Toast.LENGTH_LONG).show();
+                }
+            }
+        });
         minusK.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                if (kids > 0) {
+                if (kids > 1) {
                     kids = kids - 1;
                     displayK(kids);
+                } else {
+                    Toast.makeText(getApplicationContext(), "لايمكن ان يكون عدد الطلاب صفر او سالب", Toast.LENGTH_LONG).show();
+                }
+            }
+        });
+        minusK.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                if (kids - 10 >= 1) {
+                    kids = kids - 10;
+                    displayK(kids);
+                } else {
+                    Toast.makeText(getApplicationContext(), "لايمكن ان يكون عدد الطلاب صفر او سالب", Toast.LENGTH_LONG).show();
                 }
             }
         });
@@ -119,28 +143,21 @@ public class TourAR extends AppCompatActivity {
                         EditText Organization_Number_Field = findViewById(R.id.Booking_ORG_Number_ar);
                         String Organization_Number = Organization_Number_Field.getText().toString();
                         boolean isNull = false;
-                        if(PersonName.matches("")){
+                        if (PersonName.matches("")) {
                             isNull = true;
-                        }
-                        else if(Person_Number.matches("")){
+                        } else if (Person_Number.matches("")) {
                             isNull = true;
-                        }
-                        else if(Person_City.matches("")){
+                        } else if (Person_City.matches("")) {
                             isNull = true;
-                        }
-                        else if(Organization_Name.matches("")){
+                        } else if (Organization_Name.matches("")) {
                             isNull = true;
-                        }
-                        else if(Organization_Number.matches("")){
+                        } else if (Organization_Number.matches("")) {
                             isNull = true;
-                        }
-                        else if(adults == 0){
+                        } else if (adults == 0) {
                             isNull = true;
-                        }
-                        else if(kids == 0){
+                        } else if (kids == 0) {
                             isNull = true;
-                        }
-                        else if (isNull == false) {
+                        } else if (isNull == false) {
 
                             try {
 
@@ -172,19 +189,21 @@ public class TourAR extends AppCompatActivity {
         });
 
     }
+
     private void displayA(int num) {
         TextView Adults_Number = findViewById(R.id.adultsN_ar);
-        Adults_Number.setText(""+num);
+        Adults_Number.setText("" + num);
     }
 
 
     private void displayK(int num) {
         TextView Kids_Number = findViewById(R.id.kidsN_ar);
-        Kids_Number.setText(""+num);
+        Kids_Number.setText("" + num);
         TextView Pay = findViewById(R.id.costs_ar);
         Pay.setText("ثمن حجز الزيارة : " + num * 12 + " ش.ج");
     }
-    public void ToastMake(){
+
+    public void ToastMake() {
         EditText Person_Name_field = findViewById(R.id.Booking_Person_Name_ar);
         String Name = Person_Name_field.getText().toString();
         EditText Person_Number_field = findViewById(R.id.Booking_Person_Number_ar);
@@ -199,36 +218,28 @@ public class TourAR extends AppCompatActivity {
         boolean isNull = false;
         if (!network) {
             text = "قم بتفقد اتصالك بالانترنت من فضلك";
-        }
-        else if(Name.matches("")){
+        } else if (Name.matches("")) {
             text = "يبدو انك نسيت ادخال اسمك !";
             isNull = true;
-        }
-        else if(Phone_Number.matches("")){
+        } else if (Phone_Number.matches("")) {
             text = "الرجاء ادخال رقم هاتف المعلم !";
             isNull = true;
-        }
-        else if(Person_City.matches("")){
+        } else if (Person_City.matches("")) {
             text = "يبدو انك نسيت ادخال المدينة";
             isNull = true;
-        }
-        else if(Organization_Name.matches("")){
+        } else if (Organization_Name.matches("")) {
             text = "تأكد من ادخال اسم المدرسة";
             isNull = true;
-        }
-        else if(Organization_Number.matches("")){
+        } else if (Organization_Number.matches("")) {
             text = "الرجاء ادخال رقم هاتف المدرسة !";
             isNull = true;
-        }
-        else if(adults == 0){
+        } else if (adults == 0) {
             text = "الرجاء ادخال عدد المعلمين";
             isNull = true;
-        }
-        else if(kids == 0){
+        } else if (kids == 0) {
             text = "الرجاء ادخال عدد الطلبة";
             isNull = true;
-        }
-        else if (isNull == false){
+        } else if (isNull == false) {
             text = "بدأ الارسال";
         }
         Context context = getApplicationContext();

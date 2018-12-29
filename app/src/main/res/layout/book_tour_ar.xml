@@ -6,7 +6,7 @@
     android:layout_gravity="center_vertical|center_horizontal"
     android:background="#f5f6fa"
     android:orientation="vertical"
-    tools:context=".Tour">
+    tools:context=".TourAR">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -20,7 +20,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="60dp"
+                android:layout_marginTop="20dp"
                 android:orientation="vertical"
                 android:paddingRight="20sp"
                 android:paddingBottom="5dp">
@@ -213,7 +213,7 @@
                         android:layout_centerVertical="true"
                         android:layout_marginLeft="15sp"
                         android:layout_toLeftOf="@id/plus_adults_ar"
-                        android:text="0" />
+                        android:text="1" />
 
                     <Button
                         android:id="@+id/plus_adults_ar"
@@ -242,6 +242,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:orientation="vertical"
                 android:paddingRight="20sp">
 
                 <RelativeLayout
@@ -255,40 +256,64 @@
                         android:layout_height="wrap_content"
                         android:layout_alignParentRight="true"
                         android:text="عدد الطلاب :      " />
-
-                    <Button
-                        android:id="@+id/minusK_ar"
-                        android:layout_width="40sp"
-                        android:layout_height="40sp"
-                        android:layout_marginLeft="15sp"
-                        android:layout_toLeftOf="@id/kidsN_ar"
-                        android:background="@drawable/button_grey"
-                        android:fontFamily="@font/quicksand"
-                        android:text="-"
-                        android:textColor="#f5f6fa"
-                        android:textSize="20sp" />
-
-                    <TextView
-                        android:id="@+id/kidsN_ar"
-                        style="@style/BookingTour"
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:layout_centerHorizontal="true"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_centerVertical="true"
-                        android:layout_marginLeft="15sp"
-                        android:layout_toLeftOf="@id/plusK_ar"
-                        android:text="0" />
+                        android:layout_height="wrap_content">
+                        <Button
+                            android:id="@+id/minusKten_ar"
+                            android:layout_width="80sp"
+                            android:layout_height="40sp"
+                            android:layout_marginLeft="15sp"
+                            android:background="@drawable/button_grey"
+                            android:fontFamily="@font/quicksand"
+                            android:text="- 10"
+                            android:textColor="#f5f6fa"
+                            android:textSize="20sp" />
+                        <Button
+                            android:id="@+id/minusK_ar"
+                            android:layout_width="40sp"
+                            android:layout_height="40sp"
+                            android:layout_marginLeft="15sp"
+                            android:background="@drawable/button_grey"
+                            android:fontFamily="@font/quicksand"
+                            android:text="-"
+                            android:textColor="#f5f6fa"
+                            android:textSize="20sp" />
 
-                    <Button
-                        android:id="@+id/plusK_ar"
-                        android:layout_width="40sp"
-                        android:layout_height="40sp"
-                        android:layout_marginLeft="15sp"
-                        android:layout_toLeftOf="@id/Tollab_tv"
-                        android:background="@drawable/button_grey"
-                        android:fontFamily="@font/quicksand"
-                        android:text="+"
-                        android:textColor="#f5f6fa"
-                        android:textSize="20sp" />
+                        <TextView
+                            android:id="@+id/kidsN_ar"
+                            style="@style/BookingTour"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="15sp"
+                            android:text="1" />
+
+                        <Button
+                            android:id="@+id/plusK_ar"
+                            android:layout_width="40sp"
+                            android:layout_height="40sp"
+                            android:layout_marginLeft="15sp"
+                            android:background="@drawable/button_grey"
+                            android:fontFamily="@font/quicksand"
+                            android:text="+"
+                            android:textColor="#f5f6fa"
+                            android:textSize="20sp" />
+                        <Button
+                            android:id="@+id/plusKten_ar"
+                            android:layout_width="80sp"
+                            android:layout_height="40sp"
+                            android:layout_marginLeft="15sp"
+                            android:background="@drawable/button_grey"
+                            android:fontFamily="@font/quicksand"
+                            android:text="+ 10"
+                            android:textColor="#f5f6fa"
+                            android:textSize="20sp" />
+                    </LinearLayout>
                 </RelativeLayout>
             </LinearLayout>
 
@@ -297,11 +322,11 @@
                 android:layout_height="wrap_content">
 
                 <TextView
-                    android:layout_alignParentRight="true"
                     android:id="@+id/costs_ar"
                     style="@style/BookingTour"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
                     android:layout_marginLeft="20dp"
                     android:layout_marginTop="25dp"
                     android:text="ثمن حجز الزيارة : 0 ش.ج" />
@@ -312,7 +337,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:layout_marginTop="50dp"
+                android:layout_marginTop="15dp"
                 android:background="@drawable/button_grey"
                 android:fontFamily="@font/quicksand"
                 android:paddingHorizontal="20sp"

@@ -126,6 +126,12 @@
                             android:text="تواصل معنا" />
                     </RelativeLayout>
                 </LinearLayout>
+                <ImageView
+                    android:layout_width="150dp"
+                    android:layout_height="90dp"
+                    android:src="@drawable/nay"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentRight="true"/>
             </RelativeLayout>
         </LinearLayout>
     </RelativeLayout>

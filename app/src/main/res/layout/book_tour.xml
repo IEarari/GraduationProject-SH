@@ -3,18 +3,18 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_gravity="center_vertical|center_horizontal"
     android:background="#f5f6fa"
     android:orientation="vertical"
-    android:layout_gravity="center_vertical|center_horizontal"
     tools:context=".Tour">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="60dp"
-        android:paddingBottom="5dp"
+        android:layout_marginTop="20dp"
         android:orientation="horizontal"
-        android:paddingLeft="20sp">
+        android:paddingLeft="20sp"
+        android:paddingBottom="5dp">
 
         <TextView
             style="@style/BookingTour"
@@ -28,11 +28,12 @@
             android:cursorVisible="false"
             android:textColorLink="@color/edit_booking" />
     </LinearLayout>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingBottom="5dp"
-        android:paddingLeft="20sp">
+        android:paddingLeft="20sp"
+        android:paddingBottom="5dp">
 
         <TextView
             style="@style/BookingTour"
@@ -50,9 +51,9 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingBottom="5dp"
         android:orientation="horizontal"
-        android:paddingLeft="20sp">
+        android:paddingLeft="20sp"
+        android:paddingBottom="5dp">
 
         <TextView
             style="@style/BookingTour"
@@ -69,8 +70,8 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingBottom="5dp"
-        android:paddingLeft="20sp">
+        android:paddingLeft="20sp"
+        android:paddingBottom="5dp">
 
         <TextView
             style="@style/BookingTour"
@@ -87,8 +88,8 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingBottom="10dp"
-        android:paddingLeft="20sp">
+        android:paddingLeft="20sp"
+        android:paddingBottom="10dp">
 
         <TextView
             style="@style/BookingTour"
@@ -100,15 +101,15 @@
         <EditText
             android:id="@+id/Booking_ORG_Number"
             style="@style/BookingTour_ET"
-            android:textColorLink="@color/edit_booking"
-            android:inputType="phone"/>
+            android:inputType="phone"
+            android:textColorLink="@color/edit_booking" />
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingBottom="10dp"
-        android:paddingLeft="20sp">
+        android:paddingLeft="20sp"
+        android:paddingBottom="10dp">
 
         <TextView
             style="@style/BookingTour"
@@ -119,8 +120,8 @@
         <TextView
             android:id="@+id/Booking_Date"
             style="@style/BookingTour_ET"
-            android:textColor="#718093"
-            android:text="Click To Select The Date" />
+            android:text="Click To Select The Date"
+            android:textColor="#718093" />
     </LinearLayout>
 
     <LinearLayout
@@ -153,7 +154,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="15sp"
-            android:text="0" />
+            android:text="1" />
 
         <Button
             android:id="@+id/plusadults"
@@ -172,14 +173,30 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingLeft="20sp">
-
+        android:orientation="vertical">
         <TextView
             style="@style/BookingTour"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:paddingLeft="20sp"
             android:text="Number Of Student :   " />
-
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_centerHorizontal="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <Button
+                android:id="@+id/minusKten"
+                android:layout_width="80sp"
+                android:layout_height="40sp"
+                android:layout_marginLeft="15sp"
+                android:background="@drawable/button_grey"
+                android:fontFamily="@font/quicksand"
+                android:text="- 10"
+                android:textColor="#f5f6fa"
+                android:textSize="20sp" />
         <Button
             android:id="@+id/minusK"
             android:layout_width="40sp"
@@ -197,7 +214,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="15sp"
-            android:text="0" />
+            android:text="1" />
 
         <Button
             android:id="@+id/plusK"
@@ -209,7 +226,18 @@
             android:text="+"
             android:textColor="#f5f6fa"
             android:textSize="20sp" />
-
+            <Button
+                android:id="@+id/plusKten"
+                android:layout_width="80sp"
+                android:layout_height="40sp"
+                android:layout_marginLeft="15sp"
+                android:background="@drawable/button_grey"
+                android:fontFamily="@font/quicksand"
+                android:text="+ 10"
+                android:textColor="#f5f6fa"
+                android:textSize="20sp" />
+        </LinearLayout>
+        </RelativeLayout>
     </LinearLayout>
 
     <TextView
@@ -225,12 +253,12 @@
         android:id="@+id/Booking_Tour_Submit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="25dp"
         android:background="@drawable/button_grey"
         android:fontFamily="@font/quicksand"
         android:paddingHorizontal="20sp"
         android:text="Book  it  !"
-        android:layout_gravity="center_horizontal"
         android:textColor="#f5f6fa"
         android:textSize="20sp" />
 </LinearLayout>
