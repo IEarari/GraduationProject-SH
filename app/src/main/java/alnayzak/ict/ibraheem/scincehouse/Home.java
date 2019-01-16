@@ -56,9 +56,9 @@ public class Home extends AppCompatActivity {
     @Override
     public void onBackPressed() {
         new AlertDialog.Builder(this)
-                .setMessage("Are you sure you want to exit?")
-                .setNegativeButton("Stay", null)
-                .setPositiveButton("Exit", new DialogInterface.OnClickListener() {
+                .setMessage(getText(R.string.question))
+                .setNegativeButton(getText(R.string.stay), null)
+                .setPositiveButton(getText(R.string.exit), new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface arg0, int arg1) {
                         Home.super.onBackPressed();
                     }

@@ -23,19 +23,18 @@ public class Gifts extends AppCompatActivity {
         GridLayoutManager mGridLayoutManager = new GridLayoutManager(Gifts.this, 2);
         mRecyclerView.setLayoutManager(mGridLayoutManager);
         mGiftsList = new ArrayList<>();
-        mGiftsData = new GiftData(R.drawable.hoppers,"Hoppers", getString(R.string.hopper_desc), getString(R.string.hopper_main));
+        mGiftsData = new GiftData(R.drawable.hoppers,getString(R.string.hoppers), getString(R.string.hopper_desc), getString(R.string.hopper_main));
         mGiftsList.add(mGiftsData);
-        mGiftsData = new GiftData(R.drawable.enis,"Einstein’s riddle", getString(R.string.enis),"");
+        mGiftsData = new GiftData(R.drawable.enis,getString(R.string.enistine), getString(R.string.enis),"");
         mGiftsList.add(mGiftsData);
-        mGiftsData = new GiftData(R.drawable.sciencemem,"Science Memory", getString(R.string.smd),getString(R.string.smm));
+        mGiftsData = new GiftData(R.drawable.sciencemem,getString(R.string.sciencemem), getString(R.string.smd),getString(R.string.smm));
         mGiftsList.add(mGiftsData);
-        mGiftsData = new GiftData(R.drawable.tquest,"T-Quest", getString(R.string.tqd), getString(R.string.tqm));
+        mGiftsData = new GiftData(R.drawable.tquest,getString(R.string.tkwest), getString(R.string.tqd), getString(R.string.tqm));
         mGiftsList.add(mGiftsData);
-        mGiftsData = new GiftData(R.drawable.challange,"Challenge yourself", getString(R.string.cyd),getString(R.string.cym));
+        mGiftsData = new GiftData(R.drawable.challange,getString(R.string.chlng), getString(R.string.cyd),getString(R.string.cym));
         mGiftsList.add(mGiftsData);
-        mGiftsData = new GiftData(R.drawable.badir,"Think.. Initiate",getString(R.string.badird),getString(R.string.badirm));
+        mGiftsData = new GiftData(R.drawable.badir,getString(R.string.thnk),getString(R.string.badird),getString(R.string.badirm));
         mGiftsList.add(mGiftsData);
-        mGiftsData = new GiftData(R.drawable.rush,"Rush Hour", getString(R.string.rhd),getString(R.string.rhm));
         GiftsAdapter myAdapter = new GiftsAdapter(Gifts.this, mGiftsList);
         mRecyclerView.setAdapter(myAdapter);
     }

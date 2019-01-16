@@ -1,54 +1,33 @@
 package alnayzak.ict.ibraheem.scincehouse;
 
-import javax.activation.DataHandler;
-
-import javax.activation.DataSource;
-
-import javax.activation.FileDataSource;
-
-import javax.mail.BodyPart;
-
-import javax.mail.Message;
-
-import javax.mail.Multipart;
-
-import javax.mail.PasswordAuthentication;
-
-import javax.mail.Session;
-
-import javax.mail.Transport;
-
-import javax.mail.internet.InternetAddress;
-
-import javax.mail.internet.MimeBodyPart;
-
-import javax.mail.internet.MimeMessage;
-
-import javax.mail.internet.MimeMultipart;
-
 import java.io.ByteArrayInputStream;
-
 import java.io.IOException;
-
 import java.io.InputStream;
-
 import java.io.OutputStream;
-
 import java.security.Security;
-
 import java.util.Properties;
+
+import javax.activation.DataHandler;
+import javax.activation.DataSource;
+import javax.mail.BodyPart;
+import javax.mail.Message;
+import javax.mail.Multipart;
+import javax.mail.PasswordAuthentication;
+import javax.mail.Session;
+import javax.mail.Transport;
+import javax.mail.internet.InternetAddress;
+import javax.mail.internet.MimeBodyPart;
+import javax.mail.internet.MimeMessage;
+import javax.mail.internet.MimeMultipart;
 
 
 public class GMailSender extends javax.mail.Authenticator {
-
-    private String mailhost = "smtp.gmail.com";
 
     private String user;
 
     private String password;
 
     private Session session;
-
 
 
     private Multipart _multipart = new MimeMultipart();
@@ -60,7 +39,6 @@ public class GMailSender extends javax.mail.Authenticator {
     }
 
 
-
     public GMailSender(String user, String password) {
 
         this.user = user;
@@ -68,12 +46,11 @@ public class GMailSender extends javax.mail.Authenticator {
         this.password = password;
 
 
-
         Properties props = new Properties();
 
         props.setProperty("mail.transport.protocol", "smtp");
 
-        props.setProperty("mail.host", mailhost);
+        props.setProperty("mail.host", "smtp.gmail.com");
 
         props.put("mail.smtp.auth", "true");
 
@@ -90,11 +67,9 @@ public class GMailSender extends javax.mail.Authenticator {
         props.setProperty("mail.smtp.quitwait", "false");
 
 
-
         session = Session.getDefaultInstance(props, this);
 
     }
-
 
 
     protected PasswordAuthentication getPasswordAuthentication() {
@@ -104,10 +79,7 @@ public class GMailSender extends javax.mail.Authenticator {
     }
 
 
-
-    public synchronized void sendMail(String subject, String body,
-
-                                      String sender, String recipients) throws Exception {
+    public synchronized void sendMail(String subject, String body,String sender, String recipients) throws Exception {
 
         try {
 
@@ -129,10 +101,6 @@ public class GMailSender extends javax.mail.Authenticator {
 
             _multipart.addBodyPart(messageBodyPart);
 
-
-
-            // Put parts in message
-
             message.setContent(_multipart);
 
             if (recipients.indexOf(',') > 0)
@@ -152,12 +120,9 @@ public class GMailSender extends javax.mail.Authenticator {
         } catch (Exception e) {
 
 
-
         }
 
     }
-
-
 
 
     public class ByteArrayDataSource implements DataSource {
@@ -165,9 +130,6 @@ public class GMailSender extends javax.mail.Authenticator {
         private byte[] data;
 
         private String type;
-
-
-
 
 
         public ByteArrayDataSource(byte[] data, String type) {
@@ -187,7 +149,6 @@ public class GMailSender extends javax.mail.Authenticator {
         }
 
 
-
         public String getContentType() {
 
             if (type == null)
@@ -201,7 +162,6 @@ public class GMailSender extends javax.mail.Authenticator {
         }
 
 
-
         public InputStream getInputStream() throws IOException {
 
             return new ByteArrayInputStream(data);
@@ -209,13 +169,11 @@ public class GMailSender extends javax.mail.Authenticator {
         }
 
 
-
         public String getName() {
 
             return "ByteArrayDataSource";
 
         }
-
 
 
         public OutputStream getOutputStream() throws IOException {

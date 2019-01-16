@@ -24,16 +24,16 @@ public class GiftDetailsActivity extends AppCompatActivity {
         mSkills = findViewById(R.id.tvSkills);
         mST = findViewById(R.id.STitle);
         Bundle mBundle = getIntent().getExtras();
-        if (mBundle != null && mBundle.getString("Skills") != null) {
-            mToolbar.setTitle(mBundle.getString("Title"));
-            mFlower.setImageResource(mBundle.getInt("Image"));
-            mDescription.setText(mBundle.getString("Description"));
-            mSkills.setText(mBundle.getString("Skills"));
+        if (mBundle != null && mBundle.getString(getString(R.string.skills)) != null) {
+            mToolbar.setTitle(mBundle.getString(getString(R.string.title)));
+            mFlower.setImageResource(mBundle.getInt(getString(R.string.image)));
+            mDescription.setText(mBundle.getString(getString(R.string.description)));
+            mSkills.setText(mBundle.getString(getString(R.string.skills)));
         }
         else if(mBundle != null){
-            mToolbar.setTitle(mBundle.getString("Title"));
-            mFlower.setImageResource(mBundle.getInt("Image"));
-            mDescription.setText(mBundle.getString("Description"));
+            mToolbar.setTitle(mBundle.getString(getString(R.string.title)));
+            mFlower.setImageResource(mBundle.getInt(getString(R.string.image)));
+            mDescription.setText(mBundle.getString(getString(R.string.description)));
             mSkills.setVisibility(View.INVISIBLE);
             mST.setVisibility(View.INVISIBLE);
         }

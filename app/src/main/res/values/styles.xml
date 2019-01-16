@@ -40,4 +40,12 @@
         <item name="android:clickable">true</item>
     </style>
 
+    <style name="about_us_btns">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">#f5f6fa</item>
+        <item name="android:fontFamily">@font/quicksand</item>
+        <item name="android:background">@drawable/button_blue_grey</item>
+        <item name="android:layout_marginRight">2dp</item>
+    </style>
+
 </resources>

@@ -34,7 +34,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_alignParentRight="true"
-                        android:text="اسم المعلم : " />
+                        android:text="@string/tchrnamear" />
                 </RelativeLayout>
 
                 <EditText
@@ -62,7 +62,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_alignParentRight="true"
-                        android:text="رقم هاتف المعلم : " />
+                        android:text="@string/tchrphnnumar" />
                 </RelativeLayout>
 
                 <EditText
@@ -91,7 +91,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_alignParentRight="true"
-                        android:text="المدينة :" />
+                        android:text="@string/cityartv" />
                 </RelativeLayout>
 
                 <EditText
@@ -117,7 +117,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_alignParentRight="true"
-                        android:text="اسم المدرسة : " />
+                        android:text="@string/sclnamear" />
                 </RelativeLayout>
 
                 <EditText
@@ -142,7 +142,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_alignParentRight="true"
-                        android:text="رقم هاتف المدرسة : "
+                        android:text="@string/sclnumar"
                         android:textStyle="bold" />
                 </RelativeLayout>
 
@@ -169,7 +169,7 @@
                         style="@style/BookingTour_ET"
                         android:layout_width="wrap_content"
                         android:layout_toLeftOf="@id/tvDate"
-                        android:text="اضغط هنا لتحديد تاريخ الزيارة"
+                        android:text="@string/clickherear"
                         android:textColor="#718093" />
 
                     <TextView
@@ -178,7 +178,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_alignParentRight="true"
-                        android:text="موعد الزيارة : " />
+                        android:text="@string/tourdatear" />
                 </RelativeLayout>
             </LinearLayout>
 
@@ -200,7 +200,7 @@
                         android:layout_toLeftOf="@id/adultsN_ar"
                         android:background="@drawable/button_grey"
                         android:fontFamily="@font/quicksand"
-                        android:text="-"
+                        android:text="@string/negone"
                         android:textColor="#f5f6fa"
                         android:textSize="20sp"
                         android:textStyle="bold" />
@@ -213,7 +213,7 @@
                         android:layout_centerVertical="true"
                         android:layout_marginLeft="15sp"
                         android:layout_toLeftOf="@id/plus_adults_ar"
-                        android:text="1" />
+                        android:text="@string/one" />
 
                     <Button
                         android:id="@+id/plus_adults_ar"
@@ -223,7 +223,7 @@
                         android:layout_toLeftOf="@id/TeactherTVString"
                         android:background="@drawable/button_grey"
                         android:fontFamily="@font/quicksand"
-                        android:text="+"
+                        android:text="@string/addone"
                         android:textColor="#f5f6fa"
                         android:textSize="20sp" />
 
@@ -234,7 +234,7 @@
                         android:layout_height="wrap_content"
                         android:layout_alignParentRight="true"
                         android:layout_centerVertical="true"
-                        android:text="عدد المعلمين :     " />
+                        android:text="@string/techrnumar" />
                 </RelativeLayout>
 
             </LinearLayout>
@@ -255,7 +255,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_alignParentRight="true"
-                        android:text="عدد الطلاب :      " />
+                        android:text="@string/studnumar" />
                 </RelativeLayout>
                 <RelativeLayout
                     android:layout_width="match_parent"
@@ -271,7 +271,7 @@
                             android:layout_marginLeft="15sp"
                             android:background="@drawable/button_grey"
                             android:fontFamily="@font/quicksand"
-                            android:text="- 10"
+                            android:text="@string/negten"
                             android:textColor="#f5f6fa"
                             android:textSize="20sp" />
                         <Button
@@ -281,7 +281,7 @@
                             android:layout_marginLeft="15sp"
                             android:background="@drawable/button_grey"
                             android:fontFamily="@font/quicksand"
-                            android:text="-"
+                            android:text="@string/negone"
                             android:textColor="#f5f6fa"
                             android:textSize="20sp" />
 
@@ -291,7 +291,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="15sp"
-                            android:text="1" />
+                            android:text="@string/one" />
 
                         <Button
                             android:id="@+id/plusK_ar"
@@ -300,7 +300,7 @@
                             android:layout_marginLeft="15sp"
                             android:background="@drawable/button_grey"
                             android:fontFamily="@font/quicksand"
-                            android:text="+"
+                            android:text="@string/addone"
                             android:textColor="#f5f6fa"
                             android:textSize="20sp" />
                         <Button
@@ -310,7 +310,7 @@
                             android:layout_marginLeft="15sp"
                             android:background="@drawable/button_grey"
                             android:fontFamily="@font/quicksand"
-                            android:text="+ 10"
+                            android:text="@string/addten"
                             android:textColor="#f5f6fa"
                             android:textSize="20sp" />
                     </LinearLayout>
@@ -329,7 +329,7 @@
                     android:layout_alignParentRight="true"
                     android:layout_marginLeft="20dp"
                     android:layout_marginTop="25dp"
-                    android:text="ثمن حجز الزيارة : 0 ش.ج" />
+                    android:text="@string/costar" />
             </RelativeLayout>
 
             <Button
@@ -341,7 +341,7 @@
                 android:background="@drawable/button_grey"
                 android:fontFamily="@font/quicksand"
                 android:paddingHorizontal="20sp"
-                android:text="احجز !"
+                android:text="@string/bookar"
                 android:textColor="#f5f6fa"
                 android:textSize="20sp" />
         </LinearLayout>

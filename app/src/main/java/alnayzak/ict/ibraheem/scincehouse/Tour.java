@@ -75,7 +75,7 @@ public class Tour extends AppCompatActivity {
                     adults = adults + 1;
                     displayA(adults);
                 } else {
-                    Toast.makeText(getApplicationContext(), "Sorry But We Could Not Receive More Than 5 Teachers", Toast.LENGTH_LONG).show();
+                    Toast.makeText(getApplicationContext(), getText(R.string.errteacherar), Toast.LENGTH_LONG).show();
                 }
             }
         });
@@ -93,7 +93,7 @@ public class Tour extends AppCompatActivity {
                     kids = kids + 1;
                     displayK(kids);
                 } else {
-                    Toast.makeText(getApplicationContext(), "Sorry But We Could Not Receive More Than 50 Students", Toast.LENGTH_LONG).show();
+                    Toast.makeText(getApplicationContext(), getText(R.string.errstudarplus), Toast.LENGTH_LONG).show();
                 }
 
             }
@@ -104,7 +104,7 @@ public class Tour extends AppCompatActivity {
                     kids = kids + 10;
                     displayK(kids);
                 } else {
-                    Toast.makeText(getApplicationContext(), "Sorry But We Could Not Receive More Than 50 Students", Toast.LENGTH_LONG).show();
+                    Toast.makeText(getApplicationContext(), getText(R.string.errstudarplus), Toast.LENGTH_LONG).show();
                 }
 
             }
@@ -116,7 +116,7 @@ public class Tour extends AppCompatActivity {
                     displayK(kids);
                 }
                 else{
-                    Toast.makeText(getApplicationContext(),"Students Number cant be Negative or zero",Toast.LENGTH_LONG).show();
+                    Toast.makeText(getApplicationContext(),getText(R.string.errstudentminus),Toast.LENGTH_LONG).show();
                 }
             }
         });
@@ -127,7 +127,7 @@ public class Tour extends AppCompatActivity {
                     displayK(kids);
                 }
                 else{
-                    Toast.makeText(getApplicationContext(),"Students Number cant be Negative or zero",Toast.LENGTH_LONG).show();
+                    Toast.makeText(getApplicationContext(),getText(R.string.errstudentminus),Toast.LENGTH_LONG).show();
                 }
             }
         });
@@ -174,23 +174,16 @@ public class Tour extends AppCompatActivity {
                         else if (isNull == false) {
 
                             try {
-
-                                GMailSender sender = new GMailSender(
-
-                                        "ScienceHouseGuests@gmail.com",
-
-                                        "AlNayzak");
+                                GMailSender sender = new GMailSender(getString(R.string.email),getString(R.string.pass));
 
 
-                                sender.sendMail("Booking Tour (Science House APP)", "Dear Science House, \nWe Are in : " + Organization_Name + " in : " + Person_City + "\nWant to Visit Science House On : " + mDisplayDate.getText() + "\nWe Have " + kids + " Kid/s And " + adults + " Teachers,\nOur School Phone Number " + Organization_Number + "\nTeacher Name : " + PersonName + " \nTeacher Number :" + Person_Number,
+                                sender.sendMail(getString(R.string.subject_booking),  Organization_Name + " \n" + Person_City + "\n" + mDisplayDate.getText() + "\n" + kids + "\n" + adults + " \n" + Organization_Number + "\n" + PersonName + " \n" + Person_Number,
 
-                                        "ScienceHouseGuests@gmail.com",
-                                        // TODO Change the Receiver E-Mail to : ScienceHouse@alnayzak.org
-                                        "ScienceHouseGuests@gmail.com");
+                                        getString(R.string.email),getString(R.string.email));
 
                             } catch (Exception e) {
 
-                                Toast.makeText(getApplicationContext(), "Error", Toast.LENGTH_LONG).show();
+                                Toast.makeText(getApplicationContext(), getString(R.string.err), Toast.LENGTH_LONG).show();
 
                             }
                         }
@@ -213,7 +206,7 @@ public class Tour extends AppCompatActivity {
         TextView Kids_Number = findViewById(R.id.kidsN);
         Kids_Number.setText(""+num);
         TextView Pay = findViewById(R.id.costs);
-        Pay.setText("Your Tour Costs : " + num * 12 + " ILS");
+        Pay.setText(getString(R.string.cost) + num * 12 + getString(R.string.ils));
     }
     public void ToastMake(){
         EditText Person_Name_field = findViewById(R.id.Booking_Person_Name);
@@ -229,38 +222,34 @@ public class Tour extends AppCompatActivity {
         String text = "";
         boolean isNull = false;
         if (!network) {
-            text = "Please Check Your Internet Connection";
+            text = getString(R.string.chckcon);
         }
         else if(Name.matches("")){
-            text = "Please Insert Your Name";
+            text = getString(R.string.errname);
             isNull = true;
         }
         else if(Phone_Number.matches("")){
-            text = "Please Insert Your Number";
+            text = getString(R.string.errnumber);
             isNull = true;
         }
         else if(Person_City.matches("")){
-            text = "Please Insert Your City";
+            text = getString(R.string.errcity);
             isNull = true;
         }
         else if(Organization_Name.matches("")){
-            text = "Please Insert Your School Name";
+            text = getString(R.string.errschool);
             isNull = true;
         }
         else if(Organization_Number.matches("")){
-            text = "Please Insert Your School Number";
+            text = getString(R.string.errschoolnumber);
             isNull = true;
         }
-        else if(adults == 0){
-            text = "Please Set Teachers Number";
-            isNull = true;
-        }
-        else if(kids == 0){
-            text = "Please Set Students Number";
+        else if(kids == 1){
+            text = getString(R.string.errstudent);
             isNull = true;
         }
         else if (isNull == false){
-            text = "Start Sending";
+            text = getString(R.string.sending);
         }
         Context context = getApplicationContext();
         int duration = Toast.LENGTH_SHORT;

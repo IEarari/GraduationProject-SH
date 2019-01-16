@@ -28,7 +28,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/quicksand"
-            android:text="Your Name :"
+            android:text="@string/name"
             android:textColor="@color/g_c"
             android:textSize="18sp"
             android:textStyle="bold" />
@@ -57,7 +57,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/quicksand"
-                android:text="Your Phone number :"
+                android:text="@string/phnnum"
                 android:textColor="@color/g_c"
                 android:textSize="18sp"
                 android:textStyle="bold" />
@@ -87,7 +87,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/quicksand"
-                android:text="Subject :"
+                android:text="@string/sub"
                 android:textColor="@color/g_c"
                 android:textSize="18sp"
                 android:textStyle="bold" />
@@ -117,7 +117,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/quicksand"
-                android:text="Message :"
+                android:text="@string/msg"
                 android:textColor="@color/g_c"
                 android:textSize="18sp"
                 android:textStyle="bold" />

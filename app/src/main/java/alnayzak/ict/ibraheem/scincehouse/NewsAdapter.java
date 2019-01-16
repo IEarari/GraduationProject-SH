@@ -1,42 +1,49 @@
 package alnayzak.ict.ibraheem.scincehouse;
 
 import android.content.Context;
+import android.support.annotation.NonNull;
+import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ArrayAdapter;
 import android.widget.TextView;
 
 import java.util.List;
 
-public class NewsAdapter extends ArrayAdapter<News> {
+public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.ViewHolder> {
 
-    public NewsAdapter(Context context, List<News> news) {
-        super(context, 0, news);
+    public static class ViewHolder extends RecyclerView.ViewHolder {
+        TextView title;
+
+        public ViewHolder(@NonNull View itemView) {
+            super(itemView);
+            title = itemView.findViewById(R.id.title);
+        }
+    }
+
+    private Context context;
+    private List<News> newsList;
+
+    public NewsAdapter(Context c, List<News> list) {
+        this.context = c;
+        newsList = list;
+    }
+
+
+    @NonNull
+    @Override
+    public NewsAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
+        return new ViewHolder(LayoutInflater.from(context).inflate(R.layout.list_item_news, viewGroup, false));
     }
 
     @Override
-    public View getView(int position, View convertView, ViewGroup parent) {
-
-        if (convertView == null)
-            convertView = LayoutInflater.from(getContext()).inflate(
-                    R.layout.list_item_news, parent, false);
-
-        News currentNews = getItem(position);
-        TextView titleView = convertView.findViewById(R.id.title);
-        titleView.setText(currentNews.getTitolo());
-        titleView.setSelected(true);
-        TextView datePublishedView = convertView.findViewById(R.id.data);
-        datePublishedView.setText(formatDate(currentNews.getdatapubblicata()));
-
-        return convertView;
+    public void onBindViewHolder(@NonNull NewsAdapter.ViewHolder viewHolder, int i) {
+        News n = newsList.get(i);
+        viewHolder.title.setText(n.getTitle());
     }
 
-    private String formatDate(String stringDate) {
-
-        String formattedDate = stringDate.substring(0, stringDate.indexOf('T')) + ", " +
-                stringDate.substring(stringDate.indexOf('T') + 1, stringDate.length() - 1);
-
-        return formattedDate;
+    @Override
+    public int getItemCount() {
+        return newsList.size();
     }
 }

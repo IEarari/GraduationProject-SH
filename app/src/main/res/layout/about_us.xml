@@ -1,85 +1,70 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:tools="http://schemas.android.com/tools"
     android:background="#ffffff"
-    tools:context=".About"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    tools:context=".About">
+
     <ImageView
-        android:layout_weight=".25"
-        android:layout_marginTop="50dp"
         android:layout_width="match_parent"
         android:layout_height="0dp"
+        android:layout_marginTop="50dp"
+        android:layout_weight=".25"
         android:scaleType="centerInside"
-        android:src="@drawable/sc_nay"/>
+        android:src="@drawable/sc_nay" />
 
     <ScrollView
-        android:layout_weight="1"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_marginBottom="25dp">
+        android:layout_marginBottom="25dp"
+        android:layout_weight="1">
 
         <TextView
-            android:fontFamily="@font/quicksand"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="25dp"
+            android:fontFamily="@font/quicksand"
             android:text="@string/about_us"
             android:textColor="#0097e6"
             android:textSize="22sp"
             android:textStyle="bold" />
     </ScrollView>
+
     <LinearLayout
-        android:layout_weight=".2"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_marginBottom="7dp">
-        <Button
+        android:layout_marginBottom="7dp"
+        android:layout_weight=".2">
 
-            android:layout_marginLeft="2dp"
-            android:layout_marginRight="2dp"
-            android:fontFamily="@font/quicksand"
+        <Button
             android:id="@+id/book_tour_as"
-            android:layout_weight="1"
-            android:layout_width="0dp"
-            android:background="@drawable/button_blue_grey"
-            android:textColor="#f5f6fa"
+            style="@style/about_us_btns"
             android:layout_height="match_parent"
-            android:textSize="14sp"
-            android:text="Book A \nTour"/>
+            android:layout_marginLeft="2dp"
+            android:layout_weight="1"
+            android:text="@string/about_us_tv_booking" />
+
         <Button
-            android:background="@drawable/button_blue_grey"
-            android:layout_marginRight="2dp"
-            android:fontFamily="@font/quicksand"
             android:id="@+id/Latest_news_as"
-            android:layout_weight="1"
-            android:layout_width="0dp"
+            style="@style/about_us_btns"
             android:layout_height="match_parent"
-            android:textColor="#f5f6fa"
-            android:textSize="14sp"
-            android:text="Latest \nNews"/>
+            android:layout_weight="1"
+            android:text="@string/about_us_tv_news" />
+
         <Button
-            android:layout_marginRight="2dp"
-            android:fontFamily="@font/quicksand"
             android:id="@+id/GShop_as"
-            android:layout_weight="1"
-            android:background="@drawable/button_blue_grey"
-            android:layout_width="0dp"
+            style="@style/about_us_btns"
             android:layout_height="match_parent"
-            android:textColor="#f5f6fa"
-            android:textSize="14sp"
-            android:text="Gift \nShop"/>
+            android:layout_weight="1"
+            android:text="@string/about_us_tv_gift" />
+
         <Button
-            android:layout_marginRight="2dp"
-            android:fontFamily="@font/quicksand"
             android:id="@+id/Contact_US_as"
-            android:layout_weight="1"
-            android:layout_width="0dp"
+            style="@style/about_us_btns"
             android:layout_height="match_parent"
-            android:text="Contact \nus"
-            android:textColor="#f5f6fa"
-            android:textSize="12sp"
-            android:background="@drawable/button_blue_grey"/>
+            android:layout_weight="1"
+            android:text="@string/about_us_tv_contact" />
     </LinearLayout>
 </LinearLayout>

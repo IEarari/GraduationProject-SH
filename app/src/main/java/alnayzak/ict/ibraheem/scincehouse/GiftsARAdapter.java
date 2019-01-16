@@ -12,7 +12,7 @@ import android.widget.ImageView;
 import java.util.List;
 
 
-public class GiftsARAdapter extends RecyclerView.Adapter<GiftViewHolder> {
+public class GiftsARAdapter extends RecyclerView.Adapter<GiftARViewHolder> {
 
     private Context mContext;
     private List<GiftData> mGiftList;
@@ -23,13 +23,13 @@ public class GiftsARAdapter extends RecyclerView.Adapter<GiftViewHolder> {
     }
 
     @Override
-    public GiftViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+    public GiftARViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View mView = LayoutInflater.from(parent.getContext()).inflate(R.layout.recyclerview_row_item, parent, false);
-        return new GiftViewHolder(mView);
+        return new GiftARViewHolder(mView);
     }
 
     @Override
-    public void onBindViewHolder(final GiftViewHolder holder, int position) {
+    public void onBindViewHolder(final GiftARViewHolder holder, int position) {
         holder.mImage.setImageResource(mGiftList.get(position).getGiftImage());
         holder.mCardView.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -56,9 +56,9 @@ public class HomeAr extends AppCompatActivity {
     @Override
     public void onBackPressed() {
         new AlertDialog.Builder(this)
-                .setMessage("هل انت متأكد من انك تريد الخروج ؟")
-                .setNegativeButton("البقاء", null)
-                .setPositiveButton("الخروج", new DialogInterface.OnClickListener() {
+                .setMessage(getText(R.string.questionar))
+                .setNegativeButton(getText(R.string.stayar), null)
+                .setPositiveButton(getText(R.string.exitar), new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface arg0, int arg1) {
                         HomeAr.super.onBackPressed();
                     }

@@ -5,13 +5,13 @@ public class GiftData {
     private String giftName;
     private String giftDescription;
     private int giftImage;
-    private String giftmain;
+    private String giftMain;
 
-    public GiftData(int ImageSRC, String Title, String Discription, String MainPoints) {
+    public GiftData(int ImageSRC, String Title, String Description, String MainPoints) {
         this.giftName = Title;
-        this.giftDescription = Discription;
+        this.giftDescription = Description;
         this.giftImage = ImageSRC;
-        this.giftmain = MainPoints;
+        this.giftMain = MainPoints;
     }
 
     public String getGiftName() {
@@ -19,7 +19,7 @@ public class GiftData {
     }
 
     public String getGiftMain() {
-        return giftmain;
+        return giftMain;
     }
 
     public String getGiftDescription() {

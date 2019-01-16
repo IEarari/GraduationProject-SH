@@ -20,7 +20,7 @@
             style="@style/BookingTour"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Teacher Name :" />
+            android:text="@string/teachersname" />
 
         <EditText
             android:id="@+id/Booking_Person_Name"
@@ -39,7 +39,7 @@
             style="@style/BookingTour"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Mobile Number : " />
+            android:text="@string/phnnum" />
 
         <EditText
             android:id="@+id/Booking_Person_Number"
@@ -59,7 +59,7 @@
             style="@style/BookingTour"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Your City : " />
+            android:text="@string/cty" />
 
         <EditText
             android:id="@+id/Booking_City_Name"
@@ -77,7 +77,7 @@
             style="@style/BookingTour"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="School Name :" />
+            android:text="@string/sclname" />
 
         <EditText
             android:id="@+id/Booking_ORG_Name"
@@ -95,7 +95,7 @@
             style="@style/BookingTour"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="School Phone :"
+            android:text="@string/sclnumber"
             android:textStyle="bold" />
 
         <EditText
@@ -115,12 +115,12 @@
             style="@style/BookingTour"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Date Of Tour :" />
+            android:text="@string/dtetor" />
 
         <TextView
             android:id="@+id/Booking_Date"
             style="@style/BookingTour_ET"
-            android:text="Click To Select The Date"
+            android:text="@string/slctdate"
             android:textColor="#718093" />
     </LinearLayout>
 
@@ -134,7 +134,7 @@
             style="@style/BookingTour"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Number Of Teachers : " />
+            android:text="@string/tchrnum" />
 
         <Button
             android:id="@+id/minusA"
@@ -143,7 +143,7 @@
             android:layout_marginLeft="15sp"
             android:background="@drawable/button_grey"
             android:fontFamily="@font/quicksand"
-            android:text="-"
+            android:text="@string/negone"
             android:textColor="#f5f6fa"
             android:textSize="20sp"
             android:textStyle="bold" />
@@ -154,7 +154,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="15sp"
-            android:text="1" />
+            android:text="@string/one" />
 
         <Button
             android:id="@+id/plusadults"
@@ -163,7 +163,7 @@
             android:layout_marginLeft="15sp"
             android:background="@drawable/button_grey"
             android:fontFamily="@font/quicksand"
-            android:text="+"
+            android:text="@string/addone"
             android:textColor="#f5f6fa"
             android:textSize="20sp" />
 
@@ -179,7 +179,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:paddingLeft="20sp"
-            android:text="Number Of Student :   " />
+            android:text="@string/stdntnum" />
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
@@ -194,7 +194,7 @@
                 android:layout_marginLeft="15sp"
                 android:background="@drawable/button_grey"
                 android:fontFamily="@font/quicksand"
-                android:text="- 10"
+                android:text="@string/negten"
                 android:textColor="#f5f6fa"
                 android:textSize="20sp" />
         <Button
@@ -204,7 +204,7 @@
             android:layout_marginLeft="15sp"
             android:background="@drawable/button_grey"
             android:fontFamily="@font/quicksand"
-            android:text="-"
+            android:text="@string/negone"
             android:textColor="#f5f6fa"
             android:textSize="20sp" />
 
@@ -214,7 +214,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="15sp"
-            android:text="1" />
+            android:text="@string/one" />
 
         <Button
             android:id="@+id/plusK"
@@ -223,7 +223,7 @@
             android:layout_marginLeft="15sp"
             android:background="@drawable/button_grey"
             android:fontFamily="@font/quicksand"
-            android:text="+"
+            android:text="@string/addone"
             android:textColor="#f5f6fa"
             android:textSize="20sp" />
             <Button
@@ -233,7 +233,7 @@
                 android:layout_marginLeft="15sp"
                 android:background="@drawable/button_grey"
                 android:fontFamily="@font/quicksand"
-                android:text="+ 10"
+                android:text="@string/addten"
                 android:textColor="#f5f6fa"
                 android:textSize="20sp" />
         </LinearLayout>
@@ -247,7 +247,7 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="20dp"
         android:layout_marginTop="25dp"
-        android:text="Tour Booking Costs : 0 ILS" />
+        android:text="@string/cost" />
 
     <Button
         android:id="@+id/Booking_Tour_Submit"
@@ -258,7 +258,7 @@
         android:background="@drawable/button_grey"
         android:fontFamily="@font/quicksand"
         android:paddingHorizontal="20sp"
-        android:text="Book  it  !"
+        android:text="@string/bookit"
         android:textColor="#f5f6fa"
         android:textSize="20sp" />
 </LinearLayout>

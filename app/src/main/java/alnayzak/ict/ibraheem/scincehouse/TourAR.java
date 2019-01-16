@@ -72,7 +72,7 @@ public class TourAR extends AppCompatActivity {
                     adults = adults + 1;
                     displayA(adults);
                 } else {
-                    Toast.makeText(getApplicationContext(), "نعتذر عن استقبال اكثر من 5 معلمين !", Toast.LENGTH_LONG).show();
+                    Toast.makeText(getApplicationContext(), getText(R.string.errteacherar), Toast.LENGTH_LONG).show();
                 }
             }
         });
@@ -90,7 +90,7 @@ public class TourAR extends AppCompatActivity {
                     kids = kids + 1;
                     displayK(kids);
                 } else {
-                    Toast.makeText(getApplicationContext(), "نعتذر في بيت العلوم استقبال ما يزيد عن 50 طالب !", Toast.LENGTH_LONG).show();
+                    Toast.makeText(getApplicationContext(), getText(R.string.errstudarplus), Toast.LENGTH_LONG).show();
                 }
             }
         });
@@ -100,7 +100,7 @@ public class TourAR extends AppCompatActivity {
                     kids = kids + 10;
                     displayK(kids);
                 } else {
-                    Toast.makeText(getApplicationContext(), "نعتذر في بيت العلوم استقبال ما يزيد عن 50 طالب !", Toast.LENGTH_LONG).show();
+                    Toast.makeText(getApplicationContext(), getText(R.string.errstudarplus), Toast.LENGTH_LONG).show();
                 }
             }
         });
@@ -110,7 +110,7 @@ public class TourAR extends AppCompatActivity {
                     kids = kids - 1;
                     displayK(kids);
                 } else {
-                    Toast.makeText(getApplicationContext(), "لايمكن ان يكون عدد الطلاب صفر او سالب", Toast.LENGTH_LONG).show();
+                    Toast.makeText(getApplicationContext(), getText(R.string.errstudentnegar), Toast.LENGTH_LONG).show();
                 }
             }
         });
@@ -120,7 +120,7 @@ public class TourAR extends AppCompatActivity {
                     kids = kids - 10;
                     displayK(kids);
                 } else {
-                    Toast.makeText(getApplicationContext(), "لايمكن ان يكون عدد الطلاب صفر او سالب", Toast.LENGTH_LONG).show();
+                    Toast.makeText(getApplicationContext(), getText(R.string.errstudentnegar), Toast.LENGTH_LONG).show();
                 }
             }
         });
@@ -161,22 +161,16 @@ public class TourAR extends AppCompatActivity {
 
                             try {
 
-                                GMailSender sender = new GMailSender(
-
-                                        "ScienceHouseGuests@gmail.com",
-
-                                        "AlNayzak");
+                                GMailSender sender = new GMailSender(getString(R.string.email),getString(R.string.pass));
 
 
-                                sender.sendMail("Booking Tour (Science House APP)", "Dear Science House, \nWe Are in : " + Organization_Name + " in : " + Person_City + "\nWant to Visit Science House On : " + mDisplayDate.getText() + "\nWe Have " + kids + " Kid/s And " + adults + " Teachers,\nOur School Phone Number " + Organization_Number + "\nTeacher Name : " + PersonName + " \nTeacher Number :" + Person_Number,
+                                sender.sendMail(getString(R.string.subject_booking),  Organization_Name + "\n" + Person_City + "\n" + mDisplayDate.getText() + "\n" + kids + "\n" + adults + " \n" + Organization_Number + "\n" + PersonName + " \n" + Person_Number,
 
-                                        "ScienceHouseGuests@gmail.com",
-                                        // TODO Change the Receiver E-Mail to : ScienceHouse@alnayzak.org
-                                        "ScienceHouseGuests@gmail.com");
+                                        getString(R.string.email),getString(R.string.email));
 
                             } catch (Exception e) {
 
-                                Toast.makeText(context, "حدث خطأ ما !", Toast.LENGTH_LONG).show();
+                                Toast.makeText(context, getString(R.string.errar), Toast.LENGTH_LONG).show();
 
                             }
                         }
@@ -200,7 +194,7 @@ public class TourAR extends AppCompatActivity {
         TextView Kids_Number = findViewById(R.id.kidsN_ar);
         Kids_Number.setText("" + num);
         TextView Pay = findViewById(R.id.costs_ar);
-        Pay.setText("ثمن حجز الزيارة : " + num * 12 + " ش.ج");
+        Pay.setText(getString(R.string.costar) + num * 12 + getString(R.string.nis));
     }
 
     public void ToastMake() {
@@ -217,30 +211,27 @@ public class TourAR extends AppCompatActivity {
         String text = "";
         boolean isNull = false;
         if (!network) {
-            text = "قم بتفقد اتصالك بالانترنت من فضلك";
+            text = getString(R.string.errconar);
         } else if (Name.matches("")) {
-            text = "يبدو انك نسيت ادخال اسمك !";
+            text = getString(R.string.errnamear);
             isNull = true;
         } else if (Phone_Number.matches("")) {
-            text = "الرجاء ادخال رقم هاتف المعلم !";
+            text = getString(R.string.errnumberar);
             isNull = true;
         } else if (Person_City.matches("")) {
-            text = "يبدو انك نسيت ادخال المدينة";
+            text = getString(R.string.cityar);
             isNull = true;
         } else if (Organization_Name.matches("")) {
-            text = "تأكد من ادخال اسم المدرسة";
+            text = getString(R.string.errschoolar);
             isNull = true;
         } else if (Organization_Number.matches("")) {
-            text = "الرجاء ادخال رقم هاتف المدرسة !";
-            isNull = true;
-        } else if (adults == 0) {
-            text = "الرجاء ادخال عدد المعلمين";
+            text = getString(R.string.errschoolnumar);
             isNull = true;
         } else if (kids == 0) {
-            text = "الرجاء ادخال عدد الطلبة";
+            text = getString(R.string.errstudnumar);
             isNull = true;
         } else if (isNull == false) {
-            text = "بدأ الارسال";
+            text = getString(R.string.sendingar);
         }
         Context context = getApplicationContext();
         int duration = Toast.LENGTH_SHORT;

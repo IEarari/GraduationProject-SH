@@ -3,27 +3,16 @@ package alnayzak.ict.ibraheem.scincehouse;
 
 public class News {
 
-    private final String mTitolo;
-    private final String mdatapubblicata;
-    private final String mUrl;
+    private final String mTitle;
 
-    public News(String Titolo, String datapubblicata, String url) {
-        this.mTitolo = Titolo;
-        this.mdatapubblicata = datapubblicata;
-        this.mUrl = url;
+
+    public News(String Title) {
+        this.mTitle = Title;
     }
 
-    public String getTitolo() {
-        return mTitolo;
+    public String getTitle() {
+        return mTitle;
     }
 
-
-    public String getdatapubblicata() {
-        return mdatapubblicata;
-    }
-
-    public String getUrl() {
-        return mUrl;
-    }
 
 }

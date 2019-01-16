@@ -5,10 +5,17 @@ import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
+
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 import static android.widget.Toast.LENGTH_LONG;
 
@@ -49,23 +56,17 @@ public class Contact extends AppCompatActivity {
                             isNull = true;
                         } else if (isNull == false) {
                             try {
-                                GMailSender sender = new GMailSender(
-
-                                        "ScienceHouseGuests@gmail.com",
-
-                                        "AlNayzak");
+                                GMailSender sender = new GMailSender(getString(R.string.email),getString(R.string.pass));
 
 
-                                sender.sendMail(Subject, "Automated Header From Science House APP(Contact Us Section) \nSender Name Is :" + Name + "\nSenders Phone Number is :" + Phone_Number + "\n\nSenders Message :\n" + Message,
+                                sender.sendMail(Subject, Name + "\n"+ Phone_Number + "\n" + Message,
 
-                                        "ScienceHouseGuests@gmail.com",
-                                        // TODO Change the Receiver E-Mail to : ScienceHouse@alnayzak.org
-                                        "ScienceHouseGuests@gmail.com");
+                                        getString(R.string.email), getString(R.string.email));
 
 
                             } catch (Exception e) {
 
-                                Toast.makeText(getApplicationContext(), "Error", LENGTH_LONG).show();
+                                Toast.makeText(getApplicationContext(), getString(R.string.err), LENGTH_LONG).show();
 
 
                             }
@@ -95,21 +96,21 @@ public class Contact extends AppCompatActivity {
         String text = "";
         boolean isNull = false;
         if (!network) {
-            text = "Please Check Your Internet Connection";
+            text = getString(R.string.chckcon);
         } else if (Name.matches("")) {
-            text = "Please Insert Your Name";
+            text = getString(R.string.errname);
             isNull = true;
         } else if (Phone_Number.matches("")) {
-            text = "Please Insert Your Number";
+            text = getString(R.string.errnumber);
             isNull = true;
         } else if (Subject.matches("")) {
-            text = "Please Insert The Subject";
+            text = getString(R.string.errsub);
             isNull = true;
         } else if (Message.matches("")) {
-            text = "Please Insert Your Message";
+            text = getString(R.string.errmsg);
             isNull = true;
         } else if (isNull == false && network == true) {
-            text = "Start Sending";
+            text = getString(R.string.sending);
         }
         int duration = Toast.LENGTH_SHORT;
         Toast toast = Toast.makeText(context, text, duration);

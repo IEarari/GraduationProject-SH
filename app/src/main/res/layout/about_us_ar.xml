@@ -39,53 +39,32 @@
         android:layout_weight=".2">
 
         <Button
-
             android:id="@+id/book_tour_as_ar"
-            android:layout_width="0dp"
+            style="@style/about_us_btns"
             android:layout_height="match_parent"
             android:layout_marginLeft="2dp"
-            android:layout_marginRight="2dp"
             android:layout_weight="1"
-            android:background="@drawable/button_blue_grey"
-            android:fontFamily="@font/quicksand"
-            android:text="احجز \nزيارة !"
-            android:textColor="#f5f6fa"
-            android:textSize="14sp" />
+            android:text="@string/about_ar_tv_booking" />
 
         <Button
             android:id="@+id/Latest_news_as_ar"
-            android:layout_width="0dp"
+            style="@style/about_us_btns"
             android:layout_height="match_parent"
-            android:layout_marginRight="2dp"
             android:layout_weight="1"
-            android:background="@drawable/button_blue_grey"
-            android:fontFamily="@font/quicksand"
-            android:text="اخر \nالاخبار"
-            android:textColor="#f5f6fa"
-            android:textSize="14sp" />
+            android:text="@string/about_ar_tv_news" />
 
         <Button
             android:id="@+id/GShop_as_ar"
-            android:layout_width="0dp"
+            style="@style/about_us_btns"
             android:layout_height="match_parent"
-            android:layout_marginRight="2dp"
             android:layout_weight="1"
-            android:background="@drawable/button_blue_grey"
-            android:fontFamily="@font/quicksand"
-            android:text="متجر \nالهدايا"
-            android:textColor="#f5f6fa"
-            android:textSize="14sp" />
+            android:text="@string/about_ar_tv_gift" />
 
         <Button
             android:id="@+id/Contact_US_as_ar"
-            android:layout_width="0dp"
+            style="@style/about_us_btns"
             android:layout_height="match_parent"
-            android:layout_marginRight="2dp"
             android:layout_weight="1"
-            android:background="@drawable/button_blue_grey"
-            android:fontFamily="@font/quicksand"
-            android:text="تواصل \nمعنا"
-            android:textColor="#f5f6fa"
-            android:textSize="12sp" />
+            android:text="@string/about_ar_tv_contact" />
     </LinearLayout>
 </LinearLayout>
