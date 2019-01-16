@@ -63,7 +63,6 @@ public class ContactAr extends AppCompatActivity {
                                 sender.sendMail(Subject, Name + "\n" + Phone_Number + "\n" + Message,
 
                                         getString(R.string.email),
-                                        // TODO Change the Receiver E-Mail to : ScienceHouse@alnayzak.org
                                         getString(R.string.email));
 
 
