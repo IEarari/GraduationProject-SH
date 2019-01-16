@@ -1,0 +1,31 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/widget_margin">
+
+    <LinearLayout
+        android:layout_centerInParent="true"
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/booking_wid"
+            style="@style/MainActivityButtons"
+            android:layout_marginTop="0dp"
+            android:layout_marginBottom="15dp"
+            android:background="@drawable/button_white"
+            android:text="@string/booktourbutton"
+            android:textColor="#0097e6" />
+
+        <Button
+            android:id="@+id/gift_wid"
+            style="@style/MainActivityButtons"
+            android:layout_marginTop="0dp"
+            android:layout_marginBottom="0dp"
+            android:background="@drawable/button_white"
+            android:text="@string/giftshopbutton"
+            android:textColor="#0097e6" />
+    </LinearLayout>
+
+</RelativeLayout>

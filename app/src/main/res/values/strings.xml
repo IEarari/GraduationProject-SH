@@ -25,7 +25,7 @@ Each player has to think, s/he can use the solution code on the back of the card
     <string name="about_us_ar">بيت العلوم والتكنولوجيا هو مكان حيوي يتبع التطورات في الجوانب العلمية والهندسية والتكنولوجية في حياتنا اليومية. وتُعرض هذه الظواهر على زوار المنزل (الأطفال والبالغين) بطريقة تفاعلية تكفل مشاركة الزوار في عملية اكتساب المعرفة ، وتضمن ترفيه الزوار بالعلوم والتكنولوجيا. يعتبر بيت العلوم مؤسسة تعليمية خارج المنهج الدراسي تساعد المعلمين في توجيه المعرفة الحقيقية للأطفال بطريقة عملية.وهو أيضًا مكان لقضاء وقت ممتع وقضاء أيام عطل حيث أنه يحتوي على أقسام مختلفة تهم جميع الأعمار والمستويات التعليمية. تم تسمية بيت العلوم على اسم عائلة سعاده لأن هذه العائلة المرموقة من بيرزيت قد تبرعت بمنزلها القديم لمدة 15 عامًا ليتم تجديده واستخدامه من قبل منظمة النيزك. يهدف بيت العلوم إلى استقبال 15 ألف طالب سنويًا. حاليا ، يعتبر بيت العلوم وجهة للمدارس حيث يتم تنظيم رحلات علمية متخصصة للتمتع بساعات من العلوم والمرح بطريقة مميزة. لا تقتصر تجربة بيت العلوم على الزيارات العلمية المتخصصة فحسب ، بل يمكنها أيضًا إعادة تقديم الأنشطة اليومية والمناسبات الخاصة. \n\n</string>
     <string name="booktourbutton">Book A Tour</string>
     <string name="giftshopbutton">Gift Shop</string>
-    <string name="latestnews">Latest Tours</string>
+    <string name="latestnews">Latest News</string>
     <string name="aboutus">About Us</string>
     <string name="contactus">Contact Us</string>
 
@@ -164,4 +164,6 @@ Each player has to think, s/he can use the solution code on the back of the card
     <string name="questionar">هل انت متأكد من انك تريد الخروج ؟</string>
     <string name="stayar">البقاء</string>
     <string name="exitar">الخروج</string>
+    <string name="appwidget_text">EXAMPLE</string>
+    <string name="add_widget">Add widget</string>
 </resources>

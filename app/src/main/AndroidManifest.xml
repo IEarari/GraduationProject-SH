@@ -3,7 +3,8 @@
     package="alnayzak.ict.ibraheem.scincehouse">
 
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -13,29 +14,66 @@
         android:theme="@style/AppTheme">
         <activity android:name=".Home">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
+                <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".HomeAr" android:screenOrientation="portrait"></activity>
-        <activity android:name=".Tour" android:screenOrientation="portrait"></activity>
-        <activity android:name=".TourAR" android:screenOrientation="portrait"></activity>
-        <activity android:name=".About" android:screenOrientation="portrait"></activity>
-        <activity android:name=".AboutAr" android:screenOrientation="portrait"></activity>
-        <activity android:name=".Gifts" android:screenOrientation="portrait"></activity>
-        <activity android:name=".GiftsAr" android:screenOrientation="portrait"></activity>
-        <activity android:name=".Contact" android:screenOrientation="portrait"></activity>
-        <activity android:name=".ContactAr" android:screenOrientation="portrait"></activity>
-        <activity android:name=".NewsActivity" android:screenOrientation="portrait"></activity>
-        <activity android:name=".NewsARActivity" android:screenOrientation="portrait"></activity>
-        <activity android:name=".GiftDetailsActivity" android:screenOrientation="portrait"></activity>
-        <activity android:name=".GiftDetailsARActivity" android:screenOrientation="portrait"></activity>
+        <activity
+            android:name=".HomeAr"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Tour"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".TourAR"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".About"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".AboutAr"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Gifts"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".GiftsAr"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Contact"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ContactAr"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".NewsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".NewsARActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".GiftDetailsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".GiftDetailsARActivity"
+            android:screenOrientation="portrait" />
+
         <service android:name=".FCMMessageingService">
             <intent-filter>
-                <action android:name="com.google.firebase.MESSAGING_EVENT"></action>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
             </intent-filter>
         </service>
+
+        <receiver android:name=".BookingTourWidget">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/booking_tour_widget_info" />
+        </receiver>
     </application>
 
 </manifest>
